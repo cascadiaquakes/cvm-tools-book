@@ -9,21 +9,21 @@ This package has been tested under Python 3.12.0 on macOS 14.4.1. It may work wi
 
 1. **Clone the Repository:**
 
-   ```bash
+   ```
    git clone https://github.com/your-username/cvm-tools.git
    cd cvm-tools
    ```
 
 2. **Set Up a Virtual Environment:**
 
-   ```bash
+   ```
    python3 -m venv env
    source env/bin/activate  # On Windows use `env\Scriptsctivate`
    ```
 
 3. **Install the Dependencies:**
 
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
 
@@ -31,7 +31,7 @@ This package has been tested under Python 3.12.0 on macOS 14.4.1. It may work wi
 
    Run the simple `verify_installation.py` script to ensure everything is set up correctly. This is a minimum test to make sure packages are installed and to verify that a sample netCDF file (`sample-files/Cascadia-ANT+RF-Delph2018/Cascadia-ANT+RF-Delph2018.r0.1.nc`) can be read.
 
-   ```bash
+   ```
    python src/verify_installation.py
    ```
 

@@ -36,7 +36,7 @@ The `verify_installation.py` script is designed to ensure that all required pack
 
 Upon successful execution, you should see output similar to the following:
 
-```plaintext
+```
 Reading requirements.txt...
 Checking required packages...
 numpy is installed correctly.

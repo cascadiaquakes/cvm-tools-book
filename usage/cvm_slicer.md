@@ -21,7 +21,7 @@ The `cvm_slicer` works via prompts and user inputs. In all menus:
 
    Change your working directory to the sample files for the Cascadia model:
 
-   ```bash
+   ```
    cd sample-files/Cascadia-ANT+RF-Delph2018
    ```
 
@@ -29,7 +29,7 @@ The `cvm_slicer` works via prompts and user inputs. In all menus:
 
    Execute the `cvm_slicer` tool with the following command:
 
-   ```bash
+   ```
    ../../src/cvm_slicer.py -v -i Cascadia-ANT+RF-test.nc
    ```
 
@@ -37,7 +37,7 @@ The `cvm_slicer` works via prompts and user inputs. In all menus:
 
    It will prompt you with the following option:
 
-   ```bash
+   ```
    [data] select option [meta, range, subset, help, exit]?
    ```
 
@@ -53,13 +53,13 @@ To create a depth slice at 20 km, follow these steps:
 
 1. **Select the subset Option**
 
-   ```bash
+   ```
    [data] select option [meta, range, subset, help, exit]? subset
    ```
 
    It prompts you with the following options for selecting how you want to subset the model:
 
-   ```bash
+   ```
    [subset] select [volume, slice, xsection, back, exit]?
    ```
 
@@ -71,19 +71,19 @@ To create a depth slice at 20 km, follow these steps:
 
 2. **Selecting Slice Direction**
 
-   ```bash
+   ```
    [subset] select [volume, slice, xsection, back, exit]? slice
    ```
 
    In the slice menu, indicate the coordinate direction (depth, latitude, or longitude) you want to slice the model.
 
-   ```bash
+   ```
    [subset-slice] direction [depth, latitude, longitude, back, exit]?
    ```
 
    Since our goal is a depth slice, select `depth`.
 
-   ```bash
+   ```
    [subset-slice] direction [depth, latitude, longitude, back, exit]? depth
    ```
 
@@ -95,7 +95,7 @@ To create a depth slice at 20 km, follow these steps:
    - **Latitude Ranges:** Press `Enter` to select the entire latitude range, or provide the min and max values within the given range.
    - **Longitude Ranges:** Press `Enter` to select the entire longitude range, or provide the min and max values within the given range.
 
-   ```bash
+   ```
    [subset-slice-depth] depth [-3 to 80, back, exit]? 20
    [slice-depth] latitude limits [default values [40.00, 49.00], back, exit]:
    [slice-depth] longitude limits [default values [-124.80, -120.00], back, exit]:
@@ -112,7 +112,7 @@ To create a depth slice at 20 km, follow these steps:
 
    You will also be prompted for what to do with the selected slice data:
 
-   ```bash
+   ```
    [slice-depth] Action [plot2d, plot3d, gmap, cmap, save, back, exit]:
    ```
 
@@ -133,7 +133,7 @@ To create a depth slice at 20 km, follow these steps:
 
 The following are the steps to create a cross-section of the model by providing start and end coordinates and the desired depth range.
 
-```bash
+```
 [data] select option [meta, range, subset, help, exit]? subset
 [subset] select [volume, slice, xsection, back, exit]? xsection
 ```
@@ -143,7 +143,7 @@ The model coordinate ranges for the cross-section are:
 - latitude: 40.00 to 49.00 degrees_north
 - longitude: -124.80 to -120.00 degrees_east
 
-```bash
+```
 [slice-xsection] Cross-section start point as lat,lon ['back', 'exit']? 40,-124
 [slice-xsection] Cross-section end point as lat,lon ['back', 'exit']? 49,-121
 [slice-xsection] Cross-section depth range as start, end ['back', 'exit']? 0,80

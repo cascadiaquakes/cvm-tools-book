@@ -34,7 +34,7 @@ The `netcdf_summary_info.py` script is a utility designed to read, analyze, and 
 
 Running the script with a sample netCDF file might produce output like this:
 
-```plaintext
+```
 Global Attributes:
   - model: SVI_EQTOMO_Savard2018
   - id: SVI_EQTOMO_Savard2018

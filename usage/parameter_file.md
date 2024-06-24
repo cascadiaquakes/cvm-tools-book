@@ -38,7 +38,7 @@ The global metadata apply to the entire model. You will find a template file for
 
 Define the delimiter group that contains delimiters that are used to separate data columns in both input and output files.
 
-```plaintext
+```
 > delimiter
     data =
     geocsv = |
@@ -48,7 +48,7 @@ Define the delimiter group that contains delimiters that are used to separate da
 
 This group of attributes applies to the HDF5 files only and will be ignored by netCDF. By default, the model values and other 3D data are stored as uniform grids within the "volumes" group. The elevation of surfaces or other 2D data are stored within the "surfaces" group.
 
-```plaintext
+```
 > groups
      volumes = volumes
      surfaces = surfaces
@@ -58,7 +58,7 @@ This group of attributes applies to the HDF5 files only and will be ignored by n
 
 Specify the netCDF format to use, as defined in `shared_prop.py`.
 
-```plaintext
+```
 - netcdf_format = NETCDF4C
 ```
 
@@ -66,7 +66,7 @@ Specify the netCDF format to use, as defined in `shared_prop.py`.
 
 Provide details about the model, including its name, title, summary, and references.
 
-```plaintext
+```
 > model
     model = Cascadia_ANT+RF_Delph2018
     title = 3D vertical shear-wave velocity model of the Cascadian forearc from the joint inversion of ambient noise dispersion and receiver functions
@@ -81,7 +81,7 @@ Provide details about the model, including its name, title, summary, and referen
 
 Include the persistent identifier for the model in the repository.
 
-```plaintext
+```
 > repository
     repository_pid = doi:10.17611/dp/cascadiaantrfd2018
 ```
@@ -90,7 +90,7 @@ Include the persistent identifier for the model in the repository.
 
 Provide details about the corresponding author.
 
-```plaintext
+```
 > corresponding_author
     author_name = Jonathan R. Delph
     author_email = jdelph@purdue.edu
@@ -102,7 +102,7 @@ Provide details about the corresponding author.
 
 Define the geographical area covered by the dataset.
 
-```plaintext
+```
 > geospatial
     geospatial_lon_min = -124.8
     geospatial_lon_max = -120
@@ -122,7 +122,7 @@ Define the geographical area covered by the dataset.
 
 Include additional parameters as global attributes.
 
-```plaintext
+```
 > global_attrs
     keywords = seismic, Rayleigh waves dispersion, shear wave, s wave, Cascadian forearc, ambient noise dispersion, receiver functions
     acknowledgment = Model was provided by Jonathan R. Delph of Department of Earth, Environmental and Planetary Sciences, Rice University
@@ -131,7 +131,7 @@ Include additional parameters as global attributes.
     data_layout = vertex
 ```
 
-###### data_layout attribute
+##### data_layout attribute
 
 Each model should also include a global attribute `data_layout`. This attribute specifies the layout of the data in the file and can take two possible values:
 
@@ -149,7 +149,7 @@ Currently supporting:
 - **latitude_longitude** -- This grid mapping defines the canonical 2D geographical coordinate system based upon latitude and longitude coordinates.
 - **mercator** -- Mercator
 
-```plaintext
+```
 - grid_mapping_name = latitude_longitude
 ```
 
@@ -157,7 +157,7 @@ Currently supporting:
 
 Define the UTM zone and ellipsoid reference.
 
-```plaintext
+```
 - utm_zone = 10
 - ellipsoid = WGS84
 ```
@@ -173,7 +173,7 @@ This parameter is required for HDF5 output files only and, if provided, will be 
 - An empty dataset_group is not allowed.
 - Duplicate dataset_group names may result in variable conflicts and code failure.
 
-```plaintext
+```
 - dataset_group = velocity_density
 ```
 
@@ -183,7 +183,7 @@ Define the primary X, Y, and Z coordinates.
 
 ##### X Coordinate
 
-```plaintext
+```
 > x
     column = longitude
     variable = longitude
@@ -194,7 +194,7 @@ Define the primary X, Y, and Z coordinates.
 
 ##### Y Coordinate
 
-```plaintext
+```
 > y
     column = latitude
     variable = latitude
@@ -205,7 +205,7 @@ Define the primary X, Y, and Z coordinates.
 
 ##### Z Coordinate (if applicable)
 
-```plaintext
+```
 > z
     column = depth
     variable = depth
@@ -226,7 +226,7 @@ Define auxiliary X and Y coordinates, if necessary.
 
 ##### Auxiliary X Coordinate
 
-```plaintext
+```
 > x2
     column =
     variable = easting
@@ -237,7 +237,7 @@ Define auxiliary X and Y coordinates, if necessary.
 
 ##### Auxiliary Y Coordinate
 
-```plaintext
+```
 > y2
     column = northing
     variable = northing
@@ -250,7 +250,7 @@ Define auxiliary X and Y coordinates, if necessary.
 
 Define model variables, including column headers, variable names, and descriptions.
 
-```plaintext
+```
 > variables
     >> vs
         column = vs
@@ -262,7 +262,7 @@ Define model variables, including column headers, variable names, and descriptio
         source = data-derived
 ```
 
-###### Source variable attribute
+##### Source variable attribute
 
 In addition to the standard CF variable attributes, each model variable should contain a `source` attribute that describes the origin of the data for this variable:
 

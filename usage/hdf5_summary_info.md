@@ -34,7 +34,7 @@ The `hdf5_summary_info.py` script is a utility designed to read, analyze, and pr
 
 Running the script with a sample HDF5 file might produce output like this:
 
-```plaintext
+```
 Group: surfaces
 
 Group: surfaces/srtm_elevation
