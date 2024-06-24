@@ -1,0 +1,8 @@
+# Introduction
+
+In the Primary and Utility Tools sections, we will be using the following CVM models for demonstration. These models file are under the `sample-files` directory. Please note that the `casc1.6_velmdl` model is very large, and its data and the corresponding netCDF file are available from [Google Drive](https://drive.google.com/drive/folders/1JTN0GAf25IIFBqkTMmZCTL50VnTjiiFd?usp=sharing). The `Cascadia-ANT+RF-Delph2018` model is available from the code repository.
+
+| Model                     | Author(s)                                      | Description                                                                                                                                | Coordinates/Format | Model Page                                                                |
+| ------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ | ------------------------------------------------------------------------- |
+| casc1.6_velmdl            | William Stephenson                             | P- and S-wave velocity models incorporating the Cascadia subduction zone for 3D earthquake ground motion simulations, version 1.6          | UTM/netCDF         | [USGS](https://www.sciencebase.gov/catalog/item/59f1e68be4b0220bbd9dd4b4) |
+| Cascadia-ANT+RF-Delph2018 | Jonathan Delph, Alan Levander, and Fenglin Niu | 3D vertical shear-wave velocity model of the Cascadian forearc from the joint inversion of ambient noise dispersion and receiver functions | Geographic/netCDF  | [EMC](https://doi.org/10.17611/DP/CASCADIAANTRFD2018)                     |

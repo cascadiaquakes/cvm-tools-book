@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Using cvm_slicer &#8212; CVM-Tools-Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usage/cvm_slicer';</script>
+    <link rel="icon" href="../_static/crescent_circle.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="verify_installation" href="verify_installation.html" />
+    <link rel="prev" title="cvm_writer_h5" href="cvm_writer_h5.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/Crescent_logo.png" class="logo__image only-light" alt="CVM-Tools-Book - Home"/>
+    <script>document.write(`<img src="../_static/Crescent_logo.png" class="logo__image only-dark" alt="CVM-Tools-Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome to the CVM-Tools Tutorials
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../standards_and_conventions.html">Standards and Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_repository_overview.html">Code Repository Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_guide.html">Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools_overview.html">Tool Overview</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Primary Tools</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter_file.html">Parameter File Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cvm_writer.html">cvm_writer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cvm_writer_h5.html">cvm_writer_h5</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Using cvm_slicer</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Utility Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="verify_installation.html">verify_installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="netcdf_to_geocsv.html">netcdf_to_geocsv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="netcdf_to_cvm.html">netcdf_to_cvm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="netcdf_summary_info.html">netcdf_summary_info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hdf5_summary_info.html">hdf5_summary_info</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cascadiaquakes/cvm-tools-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cascadiaquakes/cvm-tools-book/issues/new?title=Issue%20on%20page%20%2Fusage/cvm_slicer.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/usage/cvm_slicer.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Using cvm_slicer</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-depth-slice-at-20-km">Creating a Depth Slice at 20 km</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-cross-section">Creating a Cross-Section</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="using-cvm-slicer">
+<h1>Using cvm_slicer<a class="headerlink" href="#using-cvm-slicer" title="Link to this heading">#</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">cvm_slicer</span></code> tool allows for interactive extraction and plotting of data from a CVM netCDF file. This tutorial will guide you through using <code class="docutils literal notranslate"><span class="pre">cvm_slicer</span></code> on the <code class="docutils literal notranslate"><span class="pre">Cascadia-ANT+RF-Delph2018</span></code> model we created with <code class="docutils literal notranslate"><span class="pre">cvm_writer</span></code>.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<p>A CVM model file in netCDF format. If you do not have the netCDF file or want a different file, create it using the <a class="reference internal" href="#usage/cvm_writer.html"><span class="xref myst">cvm_writer tool</span></a> or download a CVM file from <a class="reference external" href="https://drive.google.com/drive/folders/1JTN0GAf25IIFBqkTMmZCTL50VnTjiiFd?usp=sharing">Google Drive</a>.</p>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">cvm_slicer</span></code> works via prompts and user inputs. In all menus:</p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">back</span></code> to go back to the previous option.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">exit</span></code> to exit the tool.</p></li>
+<li><p>If a default value is provided, press the <code class="docutils literal notranslate"><span class="pre">return</span></code> key to accept the default. Otherwise, input the values you want to use.</p></li>
+</ul>
+</section>
+<section id="steps">
+<h2>Steps<a class="headerlink" href="#steps" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p><strong>Navigate to the Model Directory</strong></p>
+<p>Change your working directory to the sample files for the Cascadia model:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>sample-files/Cascadia-ANT+RF-Delph2018
+</pre></div>
+</div>
+</li>
+<li><p><strong>Run the Slicer Tool</strong></p>
+<p>Execute the <code class="docutils literal notranslate"><span class="pre">cvm_slicer</span></code> tool with the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>../../src/cvm_slicer.py<span class="w"> </span>-v<span class="w"> </span>-i<span class="w"> </span>Cascadia-ANT+RF-test.nc
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">-v</span></code> argument enables verbose mode, providing more detailed information about the required parameters. You can remove this tag to run the tool in a less verbose mode. The <code class="docutils literal notranslate"><span class="pre">-i</span></code> argument identifies <code class="docutils literal notranslate"><span class="pre">Cascadia-ANT+RF-test.nc</span></code> as the input file.</p>
+<p>It will prompt you with the following option:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>data<span class="o">]</span><span class="w"> </span><span class="k">select</span><span class="w"> </span>option<span class="w"> </span><span class="o">[</span>meta,<span class="w"> </span>range,<span class="w"> </span>subset,<span class="w"> </span>help,<span class="w"> </span>exit<span class="o">]</span>?
+</pre></div>
+</div>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">[data]</span></code> at the beginning of the prompt indicates the current stage of the process (data input).</p>
+<ul class="simple">
+<li><p><strong>meta:</strong> to get familiar with the model</p></li>
+<li><p><strong>range:</strong> to get information on value ranges for variables</p></li>
+<li><p><strong>subset:</strong> to subset the data and extract the depth slice</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="creating-a-depth-slice-at-20-km">
+<h2>Creating a Depth Slice at 20 km<a class="headerlink" href="#creating-a-depth-slice-at-20-km" title="Link to this heading">#</a></h2>
+<p>To create a depth slice at 20 km, follow these steps:</p>
+<ol class="arabic">
+<li><p><strong>Select the subset Option</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>data<span class="o">]</span><span class="w"> </span><span class="k">select</span><span class="w"> </span>option<span class="w"> </span><span class="o">[</span>meta,<span class="w"> </span>range,<span class="w"> </span>subset,<span class="w"> </span>help,<span class="w"> </span>exit<span class="o">]</span>?<span class="w"> </span>subset
+</pre></div>
+</div>
+<p>It prompts you with the following options for selecting how you want to subset the model:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>subset<span class="o">]</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="o">[</span>volume,<span class="w"> </span>slice,<span class="w"> </span>xsection,<span class="w"> </span>back,<span class="w"> </span>exit<span class="o">]</span>?
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>volume</strong> - a subvolume of data</p></li>
+<li><p><strong>slice</strong> - a slice along a coordinate axis</p></li>
+<li><p><strong>xsection</strong> - a vertical slice in an arbitrary direction</p></li>
+</ul>
+<p>Since we want to create a depth slice, select the <code class="docutils literal notranslate"><span class="pre">slice</span></code> option.</p>
+</li>
+<li><p><strong>Selecting Slice Direction</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>subset<span class="o">]</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="o">[</span>volume,<span class="w"> </span>slice,<span class="w"> </span>xsection,<span class="w"> </span>back,<span class="w"> </span>exit<span class="o">]</span>?<span class="w"> </span>slice
+</pre></div>
+</div>
+<p>In the slice menu, indicate the coordinate direction (depth, latitude, or longitude) you want to slice the model.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>subset-slice<span class="o">]</span><span class="w"> </span>direction<span class="w"> </span><span class="o">[</span>depth,<span class="w"> </span>latitude,<span class="w"> </span>longitude,<span class="w"> </span>back,<span class="w"> </span>exit<span class="o">]</span>?
+</pre></div>
+</div>
+<p>Since our goal is a depth slice, select <code class="docutils literal notranslate"><span class="pre">depth</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>subset-slice<span class="o">]</span><span class="w"> </span>direction<span class="w"> </span><span class="o">[</span>depth,<span class="w"> </span>latitude,<span class="w"> </span>longitude,<span class="w"> </span>back,<span class="w"> </span>exit<span class="o">]</span>?<span class="w"> </span>depth
+</pre></div>
+</div>
+</li>
+<li><p><strong>Defining Slice Limits</strong></p>
+<p>After selecting depth as the slice direction, define the limits for the slice:</p>
+<ul class="simple">
+<li><p><strong>Depth:</strong> Enter <code class="docutils literal notranslate"><span class="pre">20</span></code> to place the slice at 20 km.</p></li>
+<li><p><strong>Latitude Ranges:</strong> Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to select the entire latitude range, or provide the min and max values within the given range.</p></li>
+<li><p><strong>Longitude Ranges:</strong> Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to select the entire longitude range, or provide the min and max values within the given range.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>subset-slice-depth<span class="o">]</span><span class="w"> </span>depth<span class="w"> </span><span class="o">[</span>-3<span class="w"> </span>to<span class="w"> </span><span class="m">80</span>,<span class="w"> </span>back,<span class="w"> </span>exit<span class="o">]</span>?<span class="w"> </span><span class="m">20</span>
+<span class="o">[</span>slice-depth<span class="o">]</span><span class="w"> </span>latitude<span class="w"> </span>limits<span class="w"> </span><span class="o">[</span>default<span class="w"> </span>values<span class="w"> </span><span class="o">[</span><span class="m">40</span>.00,<span class="w"> </span><span class="m">49</span>.00<span class="o">]</span>,<span class="w"> </span>back,<span class="w"> </span>exit<span class="o">]</span>:
+<span class="o">[</span>slice-depth<span class="o">]</span><span class="w"> </span>longitude<span class="w"> </span>limits<span class="w"> </span><span class="o">[</span>default<span class="w"> </span>values<span class="w"> </span><span class="o">[</span>-124.80,<span class="w"> </span>-120.00<span class="o">]</span>,<span class="w"> </span>back,<span class="w"> </span>exit<span class="o">]</span>:
+</pre></div>
+</div>
+</li>
+<li><p><strong>Summary and Display Options</strong></p>
+<p>After providing the slice parameters, a summary of the slice will be displayed:</p>
+<figure>
+   <img src="../_images/cvm_slicer_summary.png" alt="Summary Prompt" width="400"/>
+   <figcaption>A summary of the selected depth slice at a depth of 20 km.</figcaption>
+</figure>
+<p>You will also be prompted for what to do with the selected slice data:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>slice-depth<span class="o">]</span><span class="w"> </span>Action<span class="w"> </span><span class="o">[</span>plot2d,<span class="w"> </span>plot3d,<span class="w"> </span>gmap,<span class="w"> </span>cmap,<span class="w"> </span>save,<span class="w"> </span>back,<span class="w"> </span>exit<span class="o">]</span>:
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>plot2d</strong> - a 2D plot of [‘latitude’, ‘longitude’]</p></li>
+<li><p><strong>plot3d</strong> - a 3D plot of [‘latitude’, ‘longitude’] and the model variable on the 3rd axis. The plot is interactive and can be rotated.</p></li>
+<li><p><strong>gmap</strong> - a 2D plot of [‘latitude’, ‘longitude’] in a geographical coordinate system</p></li>
+<li><p><strong>cmap</strong> - change the colormap for the plots. You can also provide <code class="docutils literal notranslate"><span class="pre">cmap</span></code>, <code class="docutils literal notranslate"><span class="pre">vmin</span></code>, and <code class="docutils literal notranslate"><span class="pre">vmax</span></code>, with <code class="docutils literal notranslate"><span class="pre">vmin</span></code> and <code class="docutils literal notranslate"><span class="pre">vmax</span></code> defining the minimum and maximum values for the colormap.</p></li>
+<li><p><strong>save</strong> - save the slice data</p></li>
+</ul>
+<p>Below is the plot generated after selecting the <code class="docutils literal notranslate"><span class="pre">gmap</span></code> option:</p>
+<figure>
+<img src="../_images/cvm_slicer_depth_20_gmap.png" alt="Summary Output" width="300"/>
+<figcaption>Depth slice at 20 km depth from gmap option.</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+<section id="creating-a-cross-section">
+<h2>Creating a Cross-Section<a class="headerlink" href="#creating-a-cross-section" title="Link to this heading">#</a></h2>
+<p>The following are the steps to create a cross-section of the model by providing start and end coordinates and the desired depth range.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>data<span class="o">]</span><span class="w"> </span><span class="k">select</span><span class="w"> </span>option<span class="w"> </span><span class="o">[</span>meta,<span class="w"> </span>range,<span class="w"> </span>subset,<span class="w"> </span>help,<span class="w"> </span>exit<span class="o">]</span>?<span class="w"> </span>subset
+<span class="o">[</span>subset<span class="o">]</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="o">[</span>volume,<span class="w"> </span>slice,<span class="w"> </span>xsection,<span class="w"> </span>back,<span class="w"> </span>exit<span class="o">]</span>?<span class="w"> </span>xsection
+</pre></div>
+</div>
+<p>The model coordinate ranges for the cross-section are:</p>
+<ul class="simple">
+<li><p>depth: -3.00 to 80.00 km</p></li>
+<li><p>latitude: 40.00 to 49.00 degrees_north</p></li>
+<li><p>longitude: -124.80 to -120.00 degrees_east</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>slice-xsection<span class="o">]</span><span class="w"> </span>Cross-section<span class="w"> </span>start<span class="w"> </span>point<span class="w"> </span>as<span class="w"> </span>lat,lon<span class="w"> </span><span class="o">[</span><span class="s1">&#39;back&#39;</span>,<span class="w"> </span><span class="s1">&#39;exit&#39;</span><span class="o">]</span>?<span class="w"> </span><span class="m">40</span>,-124
+<span class="o">[</span>slice-xsection<span class="o">]</span><span class="w"> </span>Cross-section<span class="w"> </span>end<span class="w"> </span>point<span class="w"> </span>as<span class="w"> </span>lat,lon<span class="w"> </span><span class="o">[</span><span class="s1">&#39;back&#39;</span>,<span class="w"> </span><span class="s1">&#39;exit&#39;</span><span class="o">]</span>?<span class="w"> </span><span class="m">49</span>,-121
+<span class="o">[</span>slice-xsection<span class="o">]</span><span class="w"> </span>Cross-section<span class="w"> </span>depth<span class="w"> </span>range<span class="w"> </span>as<span class="w"> </span>start,<span class="w"> </span>end<span class="w"> </span><span class="o">[</span><span class="s1">&#39;back&#39;</span>,<span class="w"> </span><span class="s1">&#39;exit&#39;</span><span class="o">]</span>?<span class="w"> </span><span class="m">0</span>,80
+
+NOTES:<span class="w"> </span><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>grid_mapping_name<span class="w"> </span>is<span class="w"> </span>latitude_longitude
+<span class="o">[</span>xsection<span class="o">]</span><span class="w"> </span>Interpolation<span class="w"> </span>Method<span class="w"> </span><span class="o">[</span>linear,<span class="w"> </span>nearest,<span class="w"> </span>back,<span class="w"> </span>exit,<span class="w"> </span>default:<span class="w"> </span>linear<span class="o">]</span>?<span class="w"> </span>linear
+<span class="o">[</span>xsection<span class="o">]</span><span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>points<span class="w"> </span><span class="o">[</span><span class="s1">&#39;back&#39;</span>,<span class="w"> </span><span class="s1">&#39;exit&#39;</span>,<span class="w"> </span>default:<span class="w"> </span><span class="m">100</span><span class="o">]</span>?
+<span class="o">[</span>xsection<span class="o">]</span><span class="w"> </span>Vertical<span class="w"> </span>exaggeration<span class="w"> </span><span class="o">(</span><span class="m">0</span>:<span class="w"> </span>dynamic<span class="w"> </span>aspect<span class="w"> </span>ratio<span class="o">)[</span><span class="s1">&#39;back&#39;</span>,<span class="w"> </span><span class="s1">&#39;exit&#39;</span>,<span class="w"> </span>default:<span class="w"> </span><span class="m">0</span><span class="o">]</span>?
+</pre></div>
+</div>
+<figure>
+<img src="../_images/cvm_slicer_xsection.png" alt="Summary Output" width="300"/>
+<figcaption>A cross-section plot of the model using the xsection option.</figcaption>
+</figure>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>Follow the same logic as the two examples above to explore other types of plots and data extractions available via the <code class="docutils literal notranslate"><span class="pre">cvm_slicer</span></code> tool.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./usage"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cvm_writer_h5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">cvm_writer_h5</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="verify_installation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">verify_installation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-depth-slice-at-20-km">Creating a Depth Slice at 20 km</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-cross-section">Creating a Cross-Section</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manochehr Bahavar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

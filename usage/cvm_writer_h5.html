@@ -1,0 +1,623 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cvm_writer_h5 &#8212; CVM-Tools-Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usage/cvm_writer_h5';</script>
+    <link rel="icon" href="../_static/crescent_circle.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using cvm_slicer" href="cvm_slicer.html" />
+    <link rel="prev" title="cvm_writer" href="cvm_writer.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/Crescent_logo.png" class="logo__image only-light" alt="CVM-Tools-Book - Home"/>
+    <script>document.write(`<img src="../_static/Crescent_logo.png" class="logo__image only-dark" alt="CVM-Tools-Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome to the CVM-Tools Tutorials
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../standards_and_conventions.html">Standards and Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_repository_overview.html">Code Repository Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_guide.html">Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools_overview.html">Tool Overview</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Primary Tools</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter_file.html">Parameter File Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cvm_writer.html">cvm_writer</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">cvm_writer_h5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cvm_slicer.html">Using cvm_slicer</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Utility Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="verify_installation.html">verify_installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="netcdf_to_geocsv.html">netcdf_to_geocsv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="netcdf_to_cvm.html">netcdf_to_cvm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="netcdf_summary_info.html">netcdf_summary_info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hdf5_summary_info.html">hdf5_summary_info</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cascadiaquakes/cvm-tools-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cascadiaquakes/cvm-tools-book/issues/new?title=Issue%20on%20page%20%2Fusage/cvm_writer_h5.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/usage/cvm_writer_h5.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>cvm_writer_h5</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-navigate-to-the-model-directory">Step 1: Navigate to the Model Directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-prepare-the-data-file">Step 2: Prepare the Data File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-prepare-the-metadata-file">Step 3: Prepare the Metadata File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-create-the-model-file">Step 4: Create the Model File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-examine-the-hdf5-file-content">Step 5: Examine the HDF5 File Content</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="cvm-writer-h5">
+<h1>cvm_writer_h5<a class="headerlink" href="#cvm-writer-h5" title="Link to this heading">#</a></h1>
+<p>In this tutorial, we will use the <code class="docutils literal notranslate"><span class="pre">cvm_writer_h5</span></code> tool to convert the <code class="docutils literal notranslate"><span class="pre">Cascadia_ANT+RF_Delph2018</span></code> raw data into a CVM model file in HDF5 format. To create CVMs in HDF5 format, we need:</p>
+<ul class="simple">
+<li><p>The model data files in CSV format</p></li>
+<li><p>A global parameter file</p></li>
+<li><p>Parameter files for the variables</p></li>
+</ul>
+<p>The parameter files are based on the templates from the <code class="docutils literal notranslate"><span class="pre">template</span></code> directory.</p>
+<p>For converting the <code class="docutils literal notranslate"><span class="pre">Cascadia_ANT+RF_Delph2018</span></code> model to HDF5, we need one data file and one parameter file since only one dataset exists in the model.</p>
+<p>As you note below, the steps needed to convert the model are similar to those of the <a class="reference internal" href="#usage/cvm_writer.html"><span class="xref myst">cvm_writer</span></a> to create a netCDF file.</p>
+<section id="step-1-navigate-to-the-model-directory">
+<h2>Step 1: Navigate to the Model Directory<a class="headerlink" href="#step-1-navigate-to-the-model-directory" title="Link to this heading">#</a></h2>
+<p>Change your directory to the model directory:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>sample-files/Cascadia-ANT+RF-Delph2018
+</pre></div>
+</div>
+</section>
+<section id="step-2-prepare-the-data-file">
+<h2>Step 2: Prepare the Data File<a class="headerlink" href="#step-2-prepare-the-data-file" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Cascadia_ANT+RF_Delph2018.txt.gz</span></code> file is the raw data file for the model. Unzip it and copy it to a file for testing (e.g., <code class="docutils literal notranslate"><span class="pre">Cascadia-ANT+RF_data.txt</span></code>). This will be our model’s data file. All model data files need to have a header as their first line that identifies the columns in the file using the same delimiter between column names as used for the data. Place the following header as the first line in <code class="docutils literal notranslate"><span class="pre">Cascadia-ANT+RF_data.txt</span></code>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>longitude<span class="w"> </span>latitude<span class="w"> </span>depth<span class="w"> </span>vs
+</pre></div>
+</div>
+<div class="figure-container" style="display: flex; justify-content: space-around; align-items: center;">
+    <figure>
+        <img src="../_images/step2_data_file.png" alt="Data File" width="300"/>
+        <figcaption>Data file with the required header added. The delimiter between column names should be the same as used for the data.</figcaption>
+    </figure>
+</div>
+</section>
+<section id="step-3-prepare-the-metadata-file">
+<h2>Step 3: Prepare the Metadata File<a class="headerlink" href="#step-3-prepare-the-metadata-file" title="Link to this heading">#</a></h2>
+<p>Now, we need model metadata files. The metadata files contain the model metadata as text. Templates for the metadata files are available under the <code class="docutils literal notranslate"><span class="pre">template</span></code> folder. Two metadata files are needed: one global based on <code class="docutils literal notranslate"><span class="pre">template/global_metadata_template.txt</span></code> and another for variables based on <code class="docutils literal notranslate"><span class="pre">template/variables_metadata_template.txt</span></code>. When creating HDF5 files, we need one <strong>data file</strong> and one <strong>variables_metadata file</strong> per dataset. In this case, <code class="docutils literal notranslate"><span class="pre">Cascadia_ANT+RF_Delph2018</span></code> has only one dataset.</p>
+<p>For this tutorial, you do not need to copy templates. We already have the necessary metadata file for the global attributes as <code class="docutils literal notranslate"><span class="pre">Cascadia-ANT+RF_global_meta.txt</span></code> and for variables as <code class="docutils literal notranslate"><span class="pre">Cascadia-ANT+RF_meta.txt</span></code> placed under this directory.</p>
+<figure>
+    <img src="../_images/step3_metadata_file.png" alt="Metadata File" width="500"/>
+    <figcaption>A view of the global metadata file.</figcaption>
+</figure>
+<p>Pay particular attention to the following HDF5-specific attributes in the parameter files where we define the HDF5 groupings:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Cascadia-ANT+RF_global_meta.txt</span></code> has the following definitions to define <strong>groups</strong> in our HDF5:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>groups
+<span class="w">     </span><span class="nv">volumes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>volumes
+<span class="w">     </span><span class="nv">surfaces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>surfaces
+</pre></div>
+</div>
+<p>The <strong>volumes</strong> group will be used to store 3D data and the <strong>surfaces</strong> group will be used to store the 2D data. In our case, our data is 3D and the <strong>volumes</strong> group will be used.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Cascadia-ANT+RF_meta.txt</span></code> has the following definitions to define <strong>dataset group</strong> in our HDF5:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span><span class="nv">dataset_group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>velocity
+</pre></div>
+</div>
+<p>The <strong>velocity</strong> dataset group will be used to store 3D data under the <strong>volumes</strong> group defined in the global parameter file above.</p>
+<p>For detailed instructions on how to create these parameter files, see the <a class="reference internal" href="#usage/parameter_file.html"><span class="xref myst">Parameter File Structure guide</span></a>.</p>
+</section>
+<section id="step-4-create-the-model-file">
+<h2>Step 4: Create the Model File<a class="headerlink" href="#step-4-create-the-model-file" title="Link to this heading">#</a></h2>
+<p>Now, create the model file by running:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>../../src/cvm_writer_h5.py<span class="w"> </span>-m<span class="w"> </span>Cascadia-ANT+RF_meta.txt<span class="w"> </span>-g<span class="w"> </span>Cascadia-ANT+RF_global_meta.txt<span class="w"> </span>-o<span class="w"> </span>Cascadia-ANT+RF-test<span class="w"> </span>-d<span class="w"> </span>Cascadia-ANT+RF_data.txt
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-m</span> <span class="pre">Cascadia-ANT+RF_meta.txt</span></code> tells <code class="docutils literal notranslate"><span class="pre">cvm_writer</span></code> that the variables metadata file is <code class="docutils literal notranslate"><span class="pre">Cascadia-ANT+RF_meta.txt</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-g</span> <span class="pre">Cascadia-ANT+RF_global_meta.txt</span></code> tells <code class="docutils literal notranslate"><span class="pre">cvm_writer</span></code> that the global metadata file is <code class="docutils literal notranslate"><span class="pre">Cascadia-ANT+RF_global_meta.txt</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-d</span> <span class="pre">Cascadia-ANT+RF_data.txt</span></code> tells the code where it can find the model data.</p></li>
+</ul>
+<p>After running this command, you should see a new file <code class="docutils literal notranslate"><span class="pre">Cascadia-ANT+RF-test.h5</span></code>, which is our model in HDF5.</p>
+</section>
+<section id="step-5-examine-the-hdf5-file-content">
+<h2>Step 5: Examine the HDF5 File Content<a class="headerlink" href="#step-5-examine-the-hdf5-file-content" title="Link to this heading">#</a></h2>
+<p>To examine the HDF5 file content, use the <code class="docutils literal notranslate"><span class="pre">hdf5_summary_info.py</span></code> script to summarize the created HDF5 file. Upon execution, the script will prompt you for the name of the HDF5 file to summarize. It will then read the HDF5 file and provide a summary of the metadata and data contained in the file. Successful execution of this step indicates that the general structure of the HDF5 file is correct and allows you to examine the data and metadata contained in the file to verify.</p>
+<p>Run the following command:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>../../src/hdf5_summary_info.py
+</pre></div>
+</div>
+<figure>
+    <img src="../_images/hdf5_summary_prompt.png" alt="Summary Prompt" width="300"/>
+    <figcaption>Prompt for HDF5 file name.</figcaption>
+</figure>
+<p>After providing the file name, you will see a summary of the HDF5 file content.</p>
+<figure>
+    <img src="../_images/hdf5_summary_output.png" alt="Summary Output" width="300"/>
+    <figcaption>Summary of the HDF5 file content.</figcaption>
+</figure>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./usage"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cvm_writer.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">cvm_writer</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cvm_slicer.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Using cvm_slicer</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-navigate-to-the-model-directory">Step 1: Navigate to the Model Directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-prepare-the-data-file">Step 2: Prepare the Data File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-prepare-the-metadata-file">Step 3: Prepare the Metadata File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-create-the-model-file">Step 4: Create the Model File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-examine-the-hdf5-file-content">Step 5: Examine the HDF5 File Content</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Manochehr Bahavar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
