@@ -1,0 +1,26 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+format: jb-book
+root: index
+
+parts:
+  - caption: "Introduction"
+    chapters:
+      - file: standards_and_conventions
+      - file: code_repository_overview
+      - file: setup_guide
+      - file: tools_overview
+  - caption: "Primary Tools"
+    chapters:
+      - file: usage/overview
+      - file: usage/parameter_file
+      - file: usage/cvm_writer
+      - file: usage/cvm_writer_h5
+      - file: usage/cvm_slicer
+  - caption: "Utility Tools"
+    chapters:
+      - file: usage/verify_installation
+      - file: usage/netcdf_to_geocsv
+      - file: usage/netcdf_to_cvm
+      - file: usage/netcdf_summary_info
+      - file: usage/hdf5_summary_info
