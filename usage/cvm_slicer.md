@@ -1,4 +1,3 @@
-
 # Using cvm_slicer
 
 The `cvm_slicer` tool allows for interactive extraction and plotting of data from a CVM netCDF file. This tutorial will guide you through using `cvm_slicer` on the `Cascadia-ANT+RF-Delph2018` model we created with `cvm_writer`.
@@ -125,7 +124,7 @@ To create a depth slice at 20 km, follow these steps:
    Below is the plot generated after selecting the `gmap` option:
 
    <figure>
-   <img src="../_images/cvm_slicer_depth_20_gmap.png" alt="Summary Output" width="300"/>
+   <img src="../_images/cvm_slicer_depth_20_gmap.png" alt="Summary Output" width="400"/>
    <figcaption>Depth slice at 20 km depth from gmap option.</figcaption>
    </figure>
 
@@ -139,6 +138,7 @@ The following are the steps to create a cross-section of the model by providing 
 ```
 
 The model coordinate ranges for the cross-section are:
+
 - depth: -3.00 to 80.00 km
 - latitude: 40.00 to 49.00 degrees_north
 - longitude: -124.80 to -120.00 degrees_east
@@ -155,7 +155,7 @@ NOTES: [INFO] grid_mapping_name is latitude_longitude
 ```
 
 <figure>
-<img src="../_images/cvm_slicer_xsection.png" alt="Summary Output" width="300"/>
+<img src="../_images/cvm_slicer_xsection.png" alt="Summary Output" width="400"/>
 <figcaption>A cross-section plot of the model using the xsection option.</figcaption>
 </figure>
 

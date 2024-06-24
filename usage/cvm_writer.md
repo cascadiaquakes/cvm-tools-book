@@ -73,6 +73,7 @@ python ../../src/cvm_writer.py -m Cascadia-ANT+RF_meta.txt -g Cascadia-ANT+RF_gl
 ```
 
 - `-m Cascadia-ANT+RF_meta.txt` tells `cvm_writer` that the variables metadata file is `Cascadia-ANT+RF_meta.txt`.
+- `-o Cascadia-ANT+RF-test` is the name of the output file (**no file extension should be included**).
 - `-g Cascadia-ANT+RF_global_meta.txt` tells `cvm_writer` that the global metadata file is `Cascadia-ANT+RF_global_meta.txt`.
 - `-d Cascadia-ANT+RF_data.txt` tells the code where it can find the model data.
 - `-t netcdf` specifies that we want the output to be in netCDF format.
@@ -83,7 +84,7 @@ Please note that you could also use `-t geocsv` for GeoCSV output or combine the
 
 ## Step 6: (Optional) Examine the Output Files
 
-If you created GeoCSV or JSON metadata files, look at these files to familiarize yourself with these formats.
+If you created GeoCSV or JSON metadata files in step 4 above, look at these files to familiarize yourself with these formats.
 
 <div class="figure-container" style="display: flex; justify-content: space-around; align-items: center;">
     <figure>
@@ -107,14 +108,14 @@ python ../../src/netCDF_summary_info.py
 ```
 
 <figure>
-    <img src="../_images/step7_summary_prompt.png" alt="Summary Prompt" width="300"/>
+    <img src="../_images/step7_summary_prompt.png" alt="Summary Prompt" width="400"/>
     <figcaption>Prompt for netCDF file name.</figcaption>
 </figure>
 
 After providing the file name, you will see a summary of the netCDF file content.
 
 <figure>
-    <img src="../_images/step7_summary_output.png" alt="Summary Output" width="300"/>
+    <img src="../_images/step7_summary_output.png" alt="Summary Output" width="400"/>
     <figcaption>Summary of the netCDF file content.</figcaption>
 </figure>
 

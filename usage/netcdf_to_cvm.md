@@ -1,4 +1,3 @@
-
 # netcdf_to_cvm
 
 ## Overview
@@ -22,12 +21,12 @@ In this tutorial, we will demonstrate how to run `netcdf_to_cvm` on a CVM netCDF
    Use the following command to update the `Cascadia-ANT+RF-test-missing.nc` file and add the missing parameters to it:
 
    ```bash
-   ../../src/netcdf_to_cvm.py -i Cascadia-ANT+RF-test-missing.nc -g Cascadia-ANT+RF_global_meta.txt -m Cascadia-ANT+RF_meta.txt -o Cascadia-ANT+RF-test-updated.nc
+   ../../src/netcdf_to_cvm.py -d Cascadia-ANT+RF-test-missing.nc -g Cascadia-ANT+RF_global_meta.txt -m Cascadia-ANT+RF_meta.txt -o Cascadia-ANT+RF-test-updated.nc
    ```
 
 **Command Breakdown**
 
-- `-i Cascadia-ANT+RF-test-missing.nc`: Specifies the name of the input file to convert.
+- `-d Cascadia-ANT+RF-test-missing.nc`: Specifies the name of the input file to convert.
 - `-g Cascadia-ANT+RF_global_meta.txt`: Specifies the global metadata file.
 - `-m Cascadia-ANT+RF_meta.txt`: Specifies the variables metadata file.
 - `-o Cascadia-ANT+RF-test-updated.nc`: Specifies the name of the output file.

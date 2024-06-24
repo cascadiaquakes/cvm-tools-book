@@ -78,6 +78,7 @@ python ../../src/cvm_writer_h5.py -m Cascadia-ANT+RF_meta.txt -g Cascadia-ANT+RF
 
 - `-m Cascadia-ANT+RF_meta.txt` tells `cvm_writer` that the variables metadata file is `Cascadia-ANT+RF_meta.txt`.
 - `-g Cascadia-ANT+RF_global_meta.txt` tells `cvm_writer` that the global metadata file is `Cascadia-ANT+RF_global_meta.txt`.
+- `-o Cascadia-ANT+RF-test` is the name of the output file (**no file extension should be included**).
 - `-d Cascadia-ANT+RF_data.txt` tells the code where it can find the model data.
 
 After running this command, you should see a new file `Cascadia-ANT+RF-test.h5`, which is our model in HDF5.
@@ -93,13 +94,13 @@ python ../../src/hdf5_summary_info.py
 ```
 
 <figure>
-    <img src="../_images/hdf5_summary_prompt.png" alt="Summary Prompt" width="300"/>
+    <img src="../_images/hdf5_summary_prompt.png" alt="Summary Prompt" width="400"/>
     <figcaption>Prompt for HDF5 file name.</figcaption>
 </figure>
 
 After providing the file name, you will see a summary of the HDF5 file content.
 
 <figure>
-    <img src="../_images/hdf5_summary_output.png" alt="Summary Output" width="300"/>
+    <img src="../_images/hdf5_summary_output.png" alt="Summary Output" width="400"/>
     <figcaption>Summary of the HDF5 file content.</figcaption>
 </figure>
