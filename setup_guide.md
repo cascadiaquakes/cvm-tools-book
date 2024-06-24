@@ -1,4 +1,3 @@
-
 # Setup Guide
 
 ## Prerequisites
@@ -18,7 +17,7 @@ This package has been tested under Python 3.12.0 on macOS 14.4.1. It may work wi
 
    ```
    python3 -m venv env
-   source env/bin/activate  # On Windows use `env\Scriptsctivate`
+   source env/bin/activate 
    ```
 
 3. **Install the Dependencies:**
