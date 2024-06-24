@@ -9,7 +9,7 @@ This package has been tested under Python 3.12.0 on macOS 14.4.1. It may work wi
 1. **Clone the Repository:**
 
    ```
-   git clone https://github.com/your-username/cvm-tools.git
+   git clone https://github.com/cascadiaquakes/cvm-tools
    cd cvm-tools
    ```
 
@@ -17,7 +17,7 @@ This package has been tested under Python 3.12.0 on macOS 14.4.1. It may work wi
 
    ```
    python3 -m venv env
-   source env/bin/activate 
+   source env/bin/activate
    ```
 
 3. **Install the Dependencies:**
