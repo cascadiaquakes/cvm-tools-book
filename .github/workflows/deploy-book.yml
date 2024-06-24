@@ -47,7 +47,7 @@ jobs:
       run: |
         jupyter-book build .
 
-            - name: Create _images directory and copy images
+    - name: Create _images directory and copy images
       run: |
         mkdir -p _build/html/_images
         cp -r images/* _build/html/_images/ 
