@@ -12,7 +12,7 @@ The parameter files are based on the templates from the `template` directory.
 
 Change your directory to the model directory:
 
-```sh
+```
 cd sample-files/Cascadia-ANT+RF-Delph2018
 ```
 
@@ -20,7 +20,7 @@ cd sample-files/Cascadia-ANT+RF-Delph2018
 
 The `Cascadia_ANT+RF_Delph2018.txt.gz` file is the raw data file for the model. Unzip it and copy it to a file for testing (e.g., `Cascadia-ANT+RF_data.txt`). This will be our model's data file. All model data files need to have a header as their first line that identifies the columns in the file using the same delimiter between column names as used for the data. Place the following header as the first line in `Cascadia-ANT+RF_data.txt`:
 
-```sh
+```
 longitude latitude depth vs
 ```
 
@@ -50,7 +50,7 @@ This step is optional. Its purpose is to familiarize you with various metadata f
 
 Convert the metadata to GeoCSV by running the `cvm_writer.py` tool:
 
-```sh
+```
 python ../../src/cvm_writer.py -m Cascadia-ANT+RF_meta.txt -g Cascadia-ANT+RF_global_meta.txt -o Cascadia-ANT+RF-test -t metadata
 ```
 
@@ -68,7 +68,7 @@ After running this command, you should see two new files in your model directory
 
 Now, create the model file by running:
 
-```sh
+```
 python ../../src/cvm_writer.py -m Cascadia-ANT+RF_meta.txt -g Cascadia-ANT+RF_global_meta.txt -o Cascadia-ANT+RF-test -d Cascadia-ANT+RF_data.txt -t netcdf
 ```
 
@@ -103,7 +103,7 @@ To examine the netCDF file content, use the `netCDF_summary_info.py` script to s
 
 Run the following command:
 
-```sh
+```
 python ../../src/netCDF_summary_info.py
 ```
 
