@@ -20,7 +20,7 @@ The `verify_installation.py` script is designed to ensure that all required pack
 1. **Run the Script**: Execute the script using Python:
 
    ```bash
-   python verify_installation.py
+   python src/verify_installation.py
    ```
 
 2. **Script Execution**: The script performs the following steps:

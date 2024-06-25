@@ -1,5 +1,6 @@
-# cvm_writer_h5
+# cvm_writer_h5 (TESTING)
 
+This tool is in testing stage.
 In this tutorial, we will use the `cvm_writer_h5` tool to convert the `Cascadia_ANT+RF_Delph2018` raw data into a CVM model file in HDF5 format. To create CVMs in HDF5 format, we need:
 
 - The model data files in CSV format
