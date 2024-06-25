@@ -17,9 +17,10 @@ Parameter files define various model parameters used to construct metadata. All 
 2. **Parameter Definitions**:
 
    - Each parameter should be defined on a new line using the `key=value` format.
-   - Quotes are not required for the values.
+   - Quotes are not required for the values and should not be included.
 
 3. **Grouping and Sub-grouping**:
+   - Lines starting with `-` indicate a new parameter definition.
    - Lines starting with `>` indicate a new parameter group.
    - Each parameter group should contain one or more parameter definitions.
    - Lines starting with `>>` indicate a new parameter sub-group.
@@ -46,7 +47,7 @@ Define the delimiter group that contains delimiters that are used to separate da
 
 #### HDF5 Groups
 
-This group of attributes applies to the HDF5 files only and will be ignored by netCDF. By default, the model values and other 3D data are stored as uniform grids within the "volumes" group. The elevation of surfaces or other 2D data are stored within the "surfaces" group.
+This group of attributes applies to the HDF5 files only and will be ignored by netCDF. By default, the model values and other 3D data are stored as uniform grids within the **volumes** group. The elevation of surfaces or other 2D data are stored within the **surfaces** group.
 
 ```
 > groups
@@ -54,9 +55,9 @@ This group of attributes applies to the HDF5 files only and will be ignored by n
      surfaces = surfaces
 ```
 
-#### NetCDF Output Format
+#### netCDF Output Format
 
-Specify the netCDF format to use, as defined in `shared_prop.py`.
+Specify the netCDF format to use, as defined in `prop/shared_prop.py`.
 
 ```
 - netcdf_format = NETCDF4C
@@ -164,9 +165,9 @@ Define the UTM zone and ellipsoid reference.
 
 ### Variables Metadata
 
-Metadata for variables consist of attributes for individual variables, both coordinate variables and data variables. A template for variables metadata is available under the template directory ()`template/variables_metadata_template.txt`). The variables metadata includes:
+Metadata for variables consist of attributes for individual variables, both coordinate variables and data variables. A template for variables metadata is available under the template directory (`template/variables_metadata_template.txt`). The variables metadata includes:
 
-#### DataSet group
+#### Dataset group
 
 This parameter is required for HDF5 output files only and, if provided, will be used to create a subgroup under the root group for the dataset.
 

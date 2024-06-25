@@ -4,7 +4,7 @@ The CVM-Tools are hosted on GitHub at [https://github.com/cascadiaquakes/cvm-too
 
 ## Repository Contents
 
-- **README.md**: Provides an overview of the repository and instructions for getting started.
+- **README.md**: Provides an overview of the repository.
 - **documents/**: Contains presentations and guides related to CVM-Tools.
   - `2024-01-08-CRESCENT-CVM.pptx`
   - `2024-05-14-Tutorial-on-CVM-Tools.pptx`

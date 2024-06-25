@@ -1,6 +1,6 @@
 # Standards and Conventions
 
-The "Standards and Conventions" tutorial provides a comprehensive guide on the essential standards and conventions that CVM-Tools are based on. This tutorial covers the supported file formats, metadata requirements, and coordinate systems, ensuring that all users follow a uniform approach to creating, distributing, and utilizing CVM model files. By adhering to these conventions, researchers can enhance the consistency and interoperability of their models, facilitating more effective collaboration and data sharing. The tutorial also emphasizes the importance of metadata, detailing the necessary attributes and their formats, and provides guidelines for coordinate system usage to minimize distortion and improve accuracy. This foundational knowledge is crucial for maintaining the integrity and usability of the CVM data and tools.
+The **Standards and Conventions** tutorial provides a comprehensive guide on the essential standards and conventions that CVM-Tools are based on. This tutorial covers the supported file formats, metadata requirements, and coordinate systems, ensuring that all users follow a uniform approach to creating, distributing, and utilizing CVM model files. By adhering to these conventions, researchers can enhance the consistency and interoperability of their models, facilitating more effective collaboration and data sharing. The tutorial also emphasizes the importance of metadata, detailing the necessary attributes and their formats, and provides guidelines for coordinate system usage to minimize distortion and improve accuracy. This foundational knowledge is crucial for maintaining the integrity and usability of the CVM data and tools.
 
 ## File Formats
 
@@ -50,19 +50,19 @@ In addition to the primary formats (netCDF and HDF5), the CVM-Tools also support
 
 ## Metadata
 
-All CVMs include extensive metadata that follow the [CF Metadata Conventions](https://cfconventions.org/) and, as needed, introduce additional attributes like `source` data variable attribute and `data_layout` global attribute below.
+All CVM files include extensive metadata that follow the [CF Metadata Conventions](https://cfconventions.org/) and, as needed, introduce additional attributes like `source` data variable attribute and `data_layout` global attribute.
 
 ### Source
 
 In addition to the standard CF variable attributes, each model data variable should contain a `source` attribute that describes the origin of the data for this variable:
 
-- If the data is derived from observations, the `source` attribute should be set to "data-derived."
+- If the data is derived from observations, the `source` attribute should be set to **data-derived**.
 - If the data is derived from an empirical formula, the `source` attribute should indicate how the variable was derived.
 
 For example:
 
-- `vp:source = "data-derived"`
-- `vs:source = "assumed to follow vp as vs = vp / 3"`
+- `vp:source = data-derived`
+- `vs:source = assumed to follow vp as vs = vp / 3`
 
 ### Data Layout
 

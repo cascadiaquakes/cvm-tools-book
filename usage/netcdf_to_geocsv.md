@@ -1,4 +1,3 @@
-
 # netcdf_to_geocsv
 
 ## Overview
@@ -19,7 +18,7 @@ In this tutorial, we will demonstrate how to convert the `Cascadia-ANT+RF-test.n
 
 2. **Run the netcdf_to_geocsv Script**
 
-   Use the following command to convert the `Cascadia-ANT+RF-test.nc` file to GeoCSV and output its metadata in JSON:
+   Use **netcdf_to_geocsv** tool to convert the `Cascadia-ANT+RF-test.nc` file to GeoCSV and output its metadata in JSON:
 
    ```bash
    ../../src/netcdf_to_geocsv.py -i Cascadia-ANT+RF-test.nc -c true -g true -m true

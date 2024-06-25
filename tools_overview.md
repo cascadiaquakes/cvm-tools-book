@@ -18,7 +18,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 - Model in GeoCSV
 - Model in netCDF
 
-**Guide**: <a href="usage/cvm_writer.html">cvm_writer Guide</a>
+**Guide**: <a href="usage/cvm_writer.html">cvm_writer</a>
 
 ### cvm_writer_h5
 
@@ -27,7 +27,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: Create a CVM model in HDF5 format based on input parameter files and given CSV data file(s).
 
-**Guide**: <a href="usage/cvm_writer_h5.html">cvm_writer_h5 Guide</a>
+**Guide**: <a href="usage/cvm_writer_h5.html">cvm_writer_h5</a>
 
 ### cvm_slicer
 
@@ -36,7 +36,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: Extract data from a CVM netCDF file. Interactively, users can inspect the metadata, slice the data, plot, and save the sliced data.
 
-**Guide**: <a href="usage/cvm_slicer.html">cvm_slicer Guide</a>
+**Guide**: <a href="usage/cvm_slicer.html">cvm_slicer</a>
 
 ## Support Tools
 
@@ -48,7 +48,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: Verify the installation.
 
-**Guide**: <a href="usage/verify_installation.html">verify_installation Guide</a>
+**Guide**: <a href="usage/verify_installation.html">verify_installation</a>
 
 ### netcdf_to_geocsv
 
@@ -57,16 +57,16 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: Convert a CVM netCDF file to GeoCSV format and/or output its metadata in JSON format.
 
-**Guide**: <a href="usage/netcdf_to_geocsv.html">netcdf_to_geocsv Guide</a>
+**Guide**: <a href="usage/netcdf_to_geocsv.html">netcdf_to_geocsv</a>
 
 ### netcdf_to_cvm
 
 **Application**: Format conversion  
 **Description**: Converts a CF-compliant netCDF file to CVM netCDF standard.
 
-**Usage**: Convert a CF-compliant netCDF file to the CVM netCDF standard.
+**Usage**: Convert a netCDF file to the CVM netCDF standard.
 
-**Guide**: <a href="usage/netcdf_to_cvm.html">netcdf_to_cvm Guide</a>
+**Guide**: <a href="usage/netcdf_to_cvm.html">netcdf_to_cvm</a>
 
 ### netcdf_summary_info
 
@@ -75,7 +75,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: This script is for verifying the overall structure and integrity of netCDF files, ensuring that they conform to expected formats and contain the necessary information for further processing or analysis.
 
-**Guide**: <a href="usage/netcdf_summary_info.html">netcdf_summary_info Guide</a>
+**Guide**: <a href="usage/netcdf_summary_info.html">netcdf_summary_info</a>
 
 ### hdf5_summary_info
 
@@ -84,7 +84,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: This script is for verifying the overall structure and integrity of HDF5 files, ensuring that they conform to expected formats and contain the necessary information for further processing or analysis.
 
-**Guide**: <a href="usage/hdf5_summary_info.html">hdf5_summary_info Guide</a>
+**Guide**: <a href="usage/hdf5_summary_info.html">hdf5_summary_info</a>
 
 ### netcdf_to_geomodelgrids (under development)
 
@@ -93,7 +93,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: Convert a CVM netCDF file to the GeoModelGrids format.
 
-**Guide**: <a href="#">netcdf_to_geomodelgrids Guide</a>
+**Guide**: <a href="#">netcdf_to_geomodelgrids</a>
 
 ### netcdf_to_specfem (under development)
 
@@ -102,4 +102,4 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: Convert a CVM netCDF file to the SPECFEM format.
 
-**Guide**: <a href="#">netcdf_to_specfem Guide</a>
+**Guide**: <a href="#">netcdf_to_specfem</a>

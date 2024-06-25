@@ -1,10 +1,10 @@
-# Using cvm_slicer
+# cvm_slicer
 
-The `cvm_slicer` tool allows for interactive extraction and plotting of data from a CVM netCDF file. This tutorial will guide you through using `cvm_slicer` on the `Cascadia-ANT+RF-Delph2018` model we created with `cvm_writer`.
+The `cvm_slicer` tool allows for interactive extraction and plotting of data from a CVM netCDF file. This tutorial guides you through using `cvm_slicer` on the `Cascadia-ANT+RF-Delph2018` model we created with `cvm_writer`.
 
 ## Prerequisites
 
-A CVM model file in netCDF format. If you do not have the netCDF file or want a different file, create it using the [cvm_writer tool](usage/cvm_writer.html) or download a CVM file from [Google Drive](https://drive.google.com/drive/folders/1JTN0GAf25IIFBqkTMmZCTL50VnTjiiFd?usp=sharing).
+A CVM model file in netCDF format. If you do not have the netCDF file or want a different file, create it using the **cvm_writer** or download a CVM file from [Google Drive](https://drive.google.com/drive/folders/1JTN0GAf25IIFBqkTMmZCTL50VnTjiiFd?usp=sharing).
 
 ## Features
 
@@ -26,13 +26,13 @@ The `cvm_slicer` works via prompts and user inputs. In all menus:
 
 2. **Run the Slicer Tool**
 
-   Execute the `cvm_slicer` tool with the following command:
+   Execute the `cvm_slicer` tool:
 
    ```
    ../../src/cvm_slicer.py -v -i Cascadia-ANT+RF-test.nc
    ```
 
-   The `-v` argument enables verbose mode, providing more detailed information about the required parameters. You can remove this tag to run the tool in a less verbose mode. The `-i` argument identifies `Cascadia-ANT+RF-test.nc` as the input file.
+   The `-v` argument enables verbose mode, providing more detailed information about the required parameters. You can remove this tag to run the tool in a less verbose mode. The `-i` argument identifies `Cascadia-ANT+RF-test.nc` as the input netCDF file.
 
    It will prompt you with the following option:
 
@@ -42,13 +42,13 @@ The `cvm_slicer` works via prompts and user inputs. In all menus:
 
    Note that the `[data]` at the beginning of the prompt indicates the current stage of the process (data input).
 
-   - **meta:** to get familiar with the model
+   - **meta:** to see the model metadata
    - **range:** to get information on value ranges for variables
-   - **subset:** to subset the data and extract the depth slice
+   - **subset:** to subset the data and extract a slice or a sub-volume of the model
 
 ## Creating a Depth Slice at 20 km
 
-To create a depth slice at 20 km, follow these steps:
+To create a depth slice at 20 km, we need to subset the model:
 
 1. **Select the subset Option**
 
@@ -56,13 +56,13 @@ To create a depth slice at 20 km, follow these steps:
    [data] select option [meta, range, subset, help, exit]? subset
    ```
 
-   It prompts you with the following options for selecting how you want to subset the model:
+   It prompts you back with the following options for selecting how you want to subset the model:
 
    ```
    [subset] select [volume, slice, xsection, back, exit]?
    ```
 
-   - **volume** - a subvolume of data
+   - **volume** - a sub-volume of data
    - **slice** - a slice along a coordinate axis
    - **xsection** - a vertical slice in an arbitrary direction
 
@@ -74,7 +74,7 @@ To create a depth slice at 20 km, follow these steps:
    [subset] select [volume, slice, xsection, back, exit]? slice
    ```
 
-   In the slice menu, indicate the coordinate direction (depth, latitude, or longitude) you want to slice the model.
+   In the slice menu, you are given the option of selecting the coordinate direction (depth, latitude, or longitude) to slice the model.
 
    ```
    [subset-slice] direction [depth, latitude, longitude, back, exit]?
@@ -109,7 +109,7 @@ To create a depth slice at 20 km, follow these steps:
       <figcaption>A summary of the selected depth slice at a depth of 20 km.</figcaption>
    </figure>
 
-   You will also be prompted for what to do with the selected slice data:
+   You will also be prompted for what you want to do with the selected slice data:
 
    ```
    [slice-depth] Action [plot2d, plot3d, gmap, cmap, save, back, exit]:
@@ -130,7 +130,7 @@ To create a depth slice at 20 km, follow these steps:
 
 ## Creating a Cross-Section
 
-The following are the steps to create a cross-section of the model by providing start and end coordinates and the desired depth range.
+The following are the steps taken to create a cross-section of the model by providing start and end coordinates and the desired depth range.
 
 ```
 [data] select option [meta, range, subset, help, exit]? subset

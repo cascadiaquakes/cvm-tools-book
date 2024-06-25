@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The [CVM-Tools repository](https://github.com/cascadiaquakes/cvm-tools) hosts Python 3 tools developed to support the Cascadia Community Velocity Models ([CVM](https://cascadiaquakes.org/cvm/)) project. These tools facilitate the storage, extraction, and visualization of the CVMs through uniform and self-contained data formats.
+The [CVM-Tools repository](https://github.com/cascadiaquakes/cvm-tools) hosts Python 3 tools developed to support the Cascadia Community Velocity Model ([CVM](https://cascadiaquakes.org/cvm/)) working group's effort in constructing a three-dimensional representation of subsurface material properties for the Cascadia region. These tools facilitate the storage, extraction, and visualization of the CVM through uniform and self-contained data formats.
 
 ## About This Tutorial
 
@@ -17,7 +17,7 @@ The **Introduction** section provides an overview of standards and rules that ap
 
 The **Primary Tools** section provides tutorials on the primary CVM tools that are used to create, maintain, extract, and visualize CVM data. This section include:
 
-- **Introduction:** Get introduced to the CVM files that will be used in this guide.
+- **Introduction:** Get introduced to the CVM data files that will be used in this guide.
 - **Parameter Files:** Explore how to structure parameter files for constructing metadata.
 - **cvm_writer:** Learn how to use the `cvm_writer` tool to convert raw CSV model data to CVM model files in netCDF.
 - **cvm_writer_h5:** Learn how to use the `cvm_writer_h5` tool to convert raw CSV model data to CVM model files in HDF5.

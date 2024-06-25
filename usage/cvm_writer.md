@@ -42,7 +42,7 @@ For this tutorial, you do not need to copy templates. We already have the necess
     <figcaption>A view of the global metadata file.</figcaption>
 </figure>
 
-For detailed instructions on how to create these parameter files, see the [Parameter File Structure guide](usage/parameter_file.html).
+For detailed instructions on how to create these parameter files, see the **Parameter File Structure guide**.
 
 ## Step 4: (Optional) Convert Metadata to GeoCSV and JSON
 
@@ -119,4 +119,4 @@ After providing the file name, you will see a summary of the netCDF file content
     <figcaption>Summary of the netCDF file content.</figcaption>
 </figure>
 
-By going through this tutorial, we have created a netCDF file (`Cascadia-ANT+RF-test.nc`) from the `Cascadia_ANT+RF_Delph2018` model's raw data. Next, we will use the `cvm_slicer` tool to view the content of this file and extract data from it.
+By going through this tutorial, we have created a netCDF file (`Cascadia-ANT+RF-test.nc`) from the `Cascadia_ANT+RF_Delph2018` model's raw data. Later, we will use the `cvm_slicer` tool to view the content of this file and extract data from it.

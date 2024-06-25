@@ -4,13 +4,13 @@ In this tutorial, we will use the `cvm_writer_h5` tool to convert the `Cascadia_
 
 - The model data files in CSV format
 - A global parameter file
-- Parameter files for the variables
+- Parameter file(s) for the variables
 
 The parameter files are based on the templates from the `template` directory.
 
 For converting the `Cascadia_ANT+RF_Delph2018` model to HDF5, we need one data file and one parameter file since only one dataset exists in the model.
 
-As you note below, the steps needed to convert the model are similar to those of the [cvm_writer](usage/cvm_writer.html) to create a netCDF file.
+As you note below, the steps needed to convert the model are similar to those of the **cvm_writer** to create a netCDF file.
 
 ## Step 1: Navigate to the Model Directory
 
@@ -21,6 +21,8 @@ cd sample-files/Cascadia-ANT+RF-Delph2018
 ```
 
 ## Step 2: Prepare the Data File
+
+You can skip this step if you did it under the **cvm_writer** tutorial.
 
 The `Cascadia_ANT+RF_Delph2018.txt.gz` file is the raw data file for the model. Unzip it and copy it to a file for testing (e.g., `Cascadia-ANT+RF_data.txt`). This will be our model's data file. All model data files need to have a header as their first line that identifies the columns in the file using the same delimiter between column names as used for the data. Place the following header as the first line in `Cascadia-ANT+RF_data.txt`:
 
@@ -46,7 +48,7 @@ For this tutorial, you do not need to copy templates. We already have the necess
     <figcaption>A view of the global metadata file.</figcaption>
 </figure>
 
-Pay particular attention to the following HDF5-specific attributes in the parameter files where we define the HDF5 groupings:
+These parameter files are the same as those used by the **cvm_writer** tool, but pay particular attention to the following HDF5-specific attributes in the parameter files where we define the HDF5 groupings:
 
 `Cascadia-ANT+RF_global_meta.txt` has the following definitions to define **groups** in our HDF5:
 
@@ -66,7 +68,7 @@ The **volumes** group will be used to store 3D data and the **surfaces** group w
 
 The **velocity** dataset group will be used to store 3D data under the **volumes** group defined in the global parameter file above.
 
-For detailed instructions on how to create these parameter files, see the [Parameter File Structure guide](usage/parameter_file.html).
+For detailed instructions on how to create these parameter files, see the **Parameter File Structure** guide.
 
 ## Step 4: Create the Model File
 

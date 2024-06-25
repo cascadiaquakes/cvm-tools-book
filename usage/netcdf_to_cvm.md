@@ -18,18 +18,18 @@ In this tutorial, we will demonstrate how to run `netcdf_to_cvm` on a CVM netCDF
 
 2. **Run the netcdf_to_cvm Script**
 
-   Use the following command to update the `Cascadia-ANT+RF-test-missing.nc` file and add the missing parameters to it:
+   Use the **netcdf_to_cvm** tool to update the `Cascadia-ANT+RF-test-missing.nc` file and add the missing parameters to it:
 
    ```bash
-   ../../src/netcdf_to_cvm.py -d Cascadia-ANT+RF-test-missing.nc -g Cascadia-ANT+RF_global_meta.txt -m Cascadia-ANT+RF_meta.txt -o Cascadia-ANT+RF-test-updated.nc
+   ../../src/netcdf_to_cvm.py -d Cascadia-ANT+RF-Delph2018.r0.1.nc -g Cascadia-ANT+RF_global_meta.txt -m Cascadia-ANT+RF_meta.txt -o Cascadia-ANT+RF-test-updated
    ```
 
 **Command Breakdown**
 
-- `-d Cascadia-ANT+RF-test-missing.nc`: Specifies the name of the input file to convert.
+- `-d Cascadia-ANT+RF-Delph2018.r0.1.nc`: Specifies the name of the input file to check.
 - `-g Cascadia-ANT+RF_global_meta.txt`: Specifies the global metadata file.
 - `-m Cascadia-ANT+RF_meta.txt`: Specifies the variables metadata file.
-- `-o Cascadia-ANT+RF-test-updated.nc`: Specifies the name of the output file.
+- `-o Cascadia-ANT+RF-test-updated.nc`: Specifies the name of the output file (**do not include a file extension**).
 
 The `netcdf_to_cvm` output, as shown below, informs us of what it needed to update/add in the file:
 
@@ -46,40 +46,13 @@ The `netcdf_to_cvm` output, as shown below, informs us of what it needed to upda
 
 ## Verification
 
-Now, by running the `netCDF_summary_info` utility tool twice, once for the input file, `Cascadia-ANT+RF-test-missing.nc`, and once for the output file, `Cascadia-ANT+RF-test-updated.nc`, and comparing the summary outputs, we can confirm that the listed updates have taken place.
+Use the **netCDF_summary_info** utility tool to verify that the listed updates have taken place.
 
 ```bash
 ../../src/netCDF_summary_info.py
-Enter the path to the NetCDF file:
+Enter the path to the NntCDF file:
 ```
 
 For example:
 
 **From `Cascadia-ANT+RF-test-missing.nc` summary output**:
-
-```bash
-  - vs (dimensions: ('depth', 'latitude', 'longitude'), shape: (84, 46, 25))
-    - _FillValue: nan
-    - variable: vs
-    - long_name: Shear-wave velocity
-    - display_name: S Velocity (km/s)
-    - units: km.s-1
-    - coordinates: easting northing
-    - grid_mapping: latitude_longitude
-```
-
-**From `Cascadia-ANT+RF-test-updated.nc` summary output**:
-
-```bash
-  - vs (dimensions: ('depth', 'latitude', 'longitude'), shape: (84, 46, 25))
-    - _FillValue: nan
-    - variable: vs
-    - long_name: Shear-wave velocity
-    - display_name: S Velocity (km/s)
-    - units: km.s-1
-    - grid_mapping: latitude_longitude
-    - data_source: data-derived <-----< added attribute
-    - coordinates: easting northing
-```
-
-We see that `data_source: data-derived` is added to the output netCDF file.
