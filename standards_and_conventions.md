@@ -62,7 +62,7 @@ In addition to the standard CF variable attributes, each model data variable sho
 For example:
 
 - `vp:source = data-derived`
-- `vs:source = assumed to follow vp as vs = vp / 3`
+- `vs:source = assumed to follow vp as vs = vp / sqrt(3) `
 
 ### Data Layout
 
@@ -77,12 +77,24 @@ Currently, the CVM-Tools support vertex-based values.
 
 Earth models are often defined on a geographic grid that follows lines of constant latitude and longitude. However, for some models, a projected coordinate system, such as UTM, is preferred because it results in less local distortion. CVM primary formats use an extended netCDF format that includes both the projected coordinate system variables and the geographic latitude and longitude variables.
 
+The primary coordinate system defines the coordinate system under which the model is described (geographic or UTM). This ensures consistency and clarity in the representation of spatial data. When setting up your netCDF file, specify the primary coordinate system to match the model's defined system.
+
+Defining an auxiliary coordinate system is optional but offers several advantages:
+
+- **Enhanced Versatility**: Provides additional spatial context, allowing data to be interpreted in multiple coordinate systems.
+- **Improved Data Analysis**: Facilitates comparisons and transformations between different projections, aiding in more comprehensive analysis.
+- **Consistency**: Ensures that various spatial datasets can be accurately integrated, maintaining consistency in geospatial representations.
+- **User Flexibility**: Users can select the most appropriate coordinate system for their specific application, enhancing usability and flexibility.
+
+These benefits collectively improve the robustness and usability of geospatial data stored in netCDF files.
+
 For the primary coordinate systems, the variables should be:
 
-- `latitude` and `longitude` (for the geographic coordinate system)
-- `x` and `y` (for the projected UTM coordinates)
+| Geographic Coordinate System | Projected UTM Coordinates |
+| ---------------------------- | ------------------------- |
+| `longitude` and `latitude`   | `x` and `y`               |
 
-If the primary coordinate variables are `latitude` and `longitude`, the auxiliary coordinates will be UTM's `easting` and `northing`. Conversely, if the primary coordinate system is UTM, the primary coordinate variables will be `x` and `y` (representing UTM easting and northing values, respectively), and the auxiliary coordinates will be the geographic `latitude` and `longitude` variables.
+If the primary coordinate variables are `longitude` and `latitude`, the auxiliary coordinates will be UTM's `easting` and `northing`. Conversely, if the primary coordinate system is UTM, the primary coordinate variables will be `x` and `y` (representing UTM easting and northing values, respectively), and the auxiliary coordinates will be the geographic `longitude`and `latitude` variables.
 
 ## Development Environment
 

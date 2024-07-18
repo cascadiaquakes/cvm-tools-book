@@ -23,7 +23,7 @@ Parameter files define various model parameters used to construct metadata. All 
    - Lines starting with `-` indicate a new parameter definition.
    - Lines starting with `>` indicate a new parameter group.
    - Each parameter group should contain one or more parameter definitions.
-   - Lines starting with `>>` indicate a new parameter sub-group.
+   - Lines starting with `>>` indicate a new parameter sub-group. Each parameter group (>) may contain as many subgroups (>>) as necessary.
    - Each parameter sub-group should be nested under a parameter group.
    - Each parameter sub-group should contain one or more parameter definitions.
 
@@ -37,7 +37,7 @@ The global metadata apply to the entire model. You will find a template file for
 
 #### Delimiters
 
-Define the delimiter group that contains delimiters that are used to separate data columns in both input and output files.
+Define the delimiters that are used to separate data columns in both input and output files. The value assigned to **data** represents the characters that separates columns in your data file. If your file is space-delimited, leave the **data** value blank. The **geocsv** represents the delimiter to use to separate the GeoCSV data columns.
 
 ```
 > delimiter
@@ -47,7 +47,7 @@ Define the delimiter group that contains delimiters that are used to separate da
 
 #### HDF5 Groups
 
-This group of attributes applies to the HDF5 files only and will be ignored by netCDF. By default, the model values and other 3D data are stored as uniform grids within the **volumes** group. The elevation of surfaces or other 2D data are stored within the **surfaces** group.
+These attributes applies to the HDF5 files only and will be ignored by netCDF. By default, the model values and other 3D data are stored as uniform grids within the **volumes** group. The elevation of surfaces or other 2D data are stored within the **surfaces** group.
 
 ```
 > groups
@@ -175,7 +175,7 @@ This parameter is required for HDF5 output files only and, if provided, will be 
 - Duplicate dataset_group names may result in variable conflicts and code failure.
 
 ```
-- dataset_group = velocity_density
+- dataset_group = velocity
 ```
 
 #### Primary Coordinates
@@ -204,7 +204,7 @@ Define the primary X, Y, and Z coordinates.
     standard_name = latitude
 ```
 
-##### Z Coordinate (if applicable)
+##### Z Coordinate (if applicable). The z coordinate could be depth, for velocity models, period for phase velocity models, etc..
 
 ```
 > z
@@ -253,6 +253,14 @@ Define model variables, including column headers, variable names, and descriptio
 
 ```
 > variables
+    >> vp
+        column = vp
+        variable = vp
+        dimensions = 3
+        long_name = P-wave velocity
+        display_name = P Velocity (km/s)
+        units = km.s-1
+        source = data-derived
     >> vs
         column = vs
         variable = vs
@@ -260,7 +268,7 @@ Define model variables, including column headers, variable names, and descriptio
         long_name = Shear-wave velocity
         display_name = S Velocity (km/s)
         units = km.s-1
-        source = data-derived
+        source = vp/sqrt(3)
 ```
 
 ##### Source variable attribute

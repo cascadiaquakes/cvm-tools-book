@@ -31,7 +31,3 @@ The **Utility Tools** section provides tutorials on various CVM utility tools to
 - **hdf5_summary_info:** A utility designed to read, analyze, and provide a comprehensive summary of an HDF5 file’s contents. This script outputs detailed information about groups, datasets, attributes, and data ranges within the HDF5 file, helping users to verify the overall structure and integrity of the file.
 
 To get started, if you are already familiar with CVM standards and conventions, feel free to jump into the {doc}`setup_guide` section, which will walk you through the installation process and initial configuration. Otherwise, before diving into the tools, it's essential to understand the standards and conventions we follow by learning about the {doc}`standards_and_conventions`.
-
-## Contributions and Feedback
-
-We welcome contributions from the community! If you have developed additional tools, found bugs, or have suggestions for improvements, please feel free to contribute to the repository or [open an issue](https://github.com/cascadiaquakes/cvm-tools/issues). Your feedback is invaluable in helping us improve and expand this resource.

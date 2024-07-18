@@ -74,17 +74,17 @@ To create a depth slice at 20 km, we need to subset the model:
    [subset] select [volume, slice, xsection, back, exit]? slice
    ```
 
-   In the slice menu, you are given the option of selecting the coordinate direction (depth, latitude, or longitude) to slice the model.
+In the slice menu, you have the option to select the coordinate direction (**coordinate 1**, **coordinate 2**, or **coordinate 3**) along which to slice the model. For this model, the variables are defined by depth, latitude, and longitude. Therefore, the prompt will be:
 
-   ```
-   [subset-slice] direction [depth, latitude, longitude, back, exit]?
-   ```
+```
+[subset-slice] direction [depth, latitude, longitude, back, exit]?
+```
 
-   Since our goal is a depth slice, select `depth`.
+Since our goal is a depth slice, select `depth`.
 
-   ```
-   [subset-slice] direction [depth, latitude, longitude, back, exit]? depth
-   ```
+```
+[subset-slice] direction [depth, latitude, longitude, back, exit]? depth
+```
 
 3. **Defining Slice Limits**
 
