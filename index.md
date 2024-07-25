@@ -26,6 +26,7 @@ The **Primary Tools** section provides tutorials on the primary CVM tools that a
 The **Utility Tools** section provides tutorials on various CVM utility tools to help with data conversion and inspection of CVM files. These tools include:
 
 - **netcdf_to_geocsv:** A utility tool for converting a netCDF CVM file to the corresponding CSV, GeoCSV format and optionally output its JSON metadata.
+- **netcdf_to_h5:** A utility tool for converting an existing CVM-compliant netCDF file to HDF5 format.
 - **netcdf_to_cvm:** A utility tool for converting an existing netCDF CVM file to the corresponding CVM-compliant netCDF file. This tool will add any missing CVM attributes based on the provided metadata files.
 - **netcdf_summary_info:** A utility tool designed to read, analyze, and provide a comprehensive summary of a netCDF4 classic file’s contents. This script outputs detailed information about dimensions, variables, attributes, and data ranges within the netCDF file, helping users to verify the overall structure and integrity of the file.
 - **hdf5_summary_info:** A utility designed to read, analyze, and provide a comprehensive summary of an HDF5 file’s contents. This script outputs detailed information about groups, datasets, attributes, and data ranges within the HDF5 file, helping users to verify the overall structure and integrity of the file.
