@@ -1,4 +1,4 @@
-# netcdf_to_cvm
+# netcdf_to_h5
 
 ## Overview
 

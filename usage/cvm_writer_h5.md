@@ -182,7 +182,7 @@ python ../../src/hdf5_summary_info.py
 ```
 
 <figure>
-    <img src="../_images/hdf5_summary_prompt.png" alt="Summary Prompt" width="400"/>
+    <img src="../_images/hdf5_summary_prompt2.png" alt="Summary Prompt" width="400"/>
     <figcaption>Prompt for HDF5 file name.</figcaption>
 </figure>
 
