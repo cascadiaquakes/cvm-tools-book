@@ -14,13 +14,15 @@ Change your directory to the model directory containing the files you want to ch
 cd sample-files/Cascadia-ANT+RF-Delph2018
 ```
 
-2. **Run the Script**: Execute the script using Python:
+### Step 2: Run the Script\*\*:
 
-   ```bash
-   python ../../src/show_file_structure.py
-   ```
+Execute the script using Python:
 
-3. **Provide the file name**:
+```bash
+python ../../src/show_file_structure.py
+```
+
+### Step 3: Provide the Input File's Name
 
 **Example 1**: The file structure of an HDF5 file with a single group of datasets.:
 
