@@ -19,12 +19,13 @@ parts:
       - file: usage/cvm_slicer
   - caption: "Utility Tools"
     chapters:
-      - file: usage/verify_installation
-      - file: usage/netcdf_to_geocsv
-      - file: usage/netcdf_to_cvm
-      - file: usage/netcdf_to_h5
-      - file: usage/netcdf_summary_info
       - file: usage/hdf5_summary_info
+      - file: usage/netcdf_summary_info
+      - file: usage/netcdf_to_cvm
+      - file: usage/netcdf_to_geocsv
+      - file: usage/netcdf_to_h5
+      - file: usage/show_file_structure
+      - file: usage/verify_installation
   - caption: "Contact Us"
     chapters:
       - file: contribution_guidelines

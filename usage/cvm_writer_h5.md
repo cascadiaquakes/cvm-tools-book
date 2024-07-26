@@ -91,7 +91,38 @@ python ../../src/cvm_writer_h5.py -m Cascadia-ANT+RF_meta.txt -g Cascadia-ANT+RF
 
 After running this command, you should see a new file `Cascadia-ANT+RF-test.h5`, which is our model in HDF5.
 
-### Step 5: Examine the HDF5 File Content
+### Step 5: View the HDF5 File Structure
+
+To view the HDF5 file structure, use the `show_file_structure.py` script.
+
+Run the following command:
+
+```sh
+python ../../src/show_file_structure.py
+```
+
+Provide the newly-generated HDF5 file name:
+
+`Enter the path to the input file (HDF5 or netCDF): Cascadia-ANT+RF-test.h5`
+
+See the file structure. In this case we set the dataset_group to blanks, so the dataset is placed under the **MODEL** group:
+
+```bash
+File Name: Cascadia-ANT+RF-test.h5
+File Size: 806936 bytes
+File Type: HDF5
+
+HDF5 File Structure:
+├── MODEL
+│   ├── depth
+│   ├── easting
+│   ├── latitude
+│   ├── longitude
+│   ├── northing
+│   ├── vs
+```
+
+### Step 6: Examine the HDF5 File Content
 
 To examine the HDF5 file content, use the `hdf5_summary_info.py` script to summarize the created HDF5 file. Upon execution, the script will prompt you for the name of the HDF5 file to summarize. It will then read the HDF5 file and provide a summary of the metadata and data contained in the file. Successful execution of this step indicates that the general structure of the HDF5 file is correct and allows you to examine the data and metadata contained in the file to verify.
 
@@ -171,7 +202,46 @@ python ../../src/cvm_writer_h5.py  -d Cascadia-ANT+RF_data_le_40km.txt,Cascadia-
 
 After running this command, you should see a new file `Cascadia-ANT+RF-test_2.h5`, which is our model in HDF5.
 
-### Step 5: Examine the HDF5 File Content
+## Step 5: View the HDF5 File Structure
+
+To view the HDF5 file structure, use the `show_file_structure.py` script.
+
+Run the following command:
+
+```sh
+python ../../src/show_file_structure.py
+```
+
+Provide the newly-generated HDF5 file name:
+
+`Enter the path to the input file (HDF5 or netCDF): Cascadia-ANT+RF-test_2.h5`
+
+See the file structure. Each dataset appear under its own **dataset_group**:
+
+```bash
+File Name: Cascadia-ANT+RF-test_2.h5
+File Size: 832920 bytes
+File Type: HDF5
+
+HDF5 File Structure:
+├── MODEL
+│   ├── depth_gt_40km
+│   │   ├── depth
+│   │   ├── easting
+│   │   ├── latitude
+│   │   ├── longitude
+│   │   ├── northing
+│   │   ├── vs
+│   ├── depth_le_40km
+│   │   ├── depth
+│   │   ├── easting
+│   │   ├── latitude
+│   │   ├── longitude
+│   │   ├── northing
+│   │   ├── vs
+```
+
+### Step 6: Examine the HDF5 File Content
 
 To examine the HDF5 file content, use the `hdf5_summary_info.py` script to summarize the created HDF5 file. Upon execution, the script will prompt you for the name of the HDF5 file to summarize. It will then read the HDF5 file and provide a summary of the metadata and data contained in the file. Successful execution of this step indicates that the general structure of the HDF5 file is correct and allows you to examine the data and metadata contained in the file to verify.
 
