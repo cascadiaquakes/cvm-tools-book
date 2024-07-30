@@ -14,7 +14,7 @@ Change your directory to the model directory containing the files you want to ch
 cd sample-files/Cascadia-ANT+RF-Delph2018
 ```
 
-### Step 2: Run the Script\*\*:
+### Step 2: Run the Script:
 
 Execute the script using Python:
 
