@@ -80,7 +80,7 @@ Provide details about the model, including its name, title, summary, and referen
 
 #### Repository Information
 
-Include the persistent identifier for the model in the repository.
+Include the persistent identifier for the model in the repository. This parameter is option set to blank if not available.
 
 ```
 > repository
@@ -181,6 +181,7 @@ This parameter is required for HDF5 output files only and, if provided, will be 
 #### Primary Coordinates
 
 Define the primary X, Y, and Z coordinates.
+**Note**: Make sure that `column` matches the corresponding variable in the first row of the data file!
 
 ##### X Coordinate
 
@@ -220,10 +221,11 @@ Define the primary X, Y, and Z coordinates.
 
 Define auxiliary X and Y coordinates, if necessary.
 
-**NOTES**:
+**Notes**:
 
 - Leave the column field EMPTY if you want the code to compute the auxiliary coordinate.
 - The auxiliary X coordinate could be longitude for the geographic coordinate system, or easting for UTM projection.
+- Make sure that `column` matches the corresponding variable in the first row of the data file!
 
 ##### Auxiliary X Coordinate
 
@@ -250,6 +252,7 @@ Define auxiliary X and Y coordinates, if necessary.
 #### Variables
 
 Define model variables, including column headers, variable names, and descriptions.
+**Note**: Make sure that `column` values match the corresponding variables in the first row of the data file! The other parameters (e.g., variable, long_name, etc.) are customizable, as is the the name after `>>`
 
 ```
 > variables
@@ -275,7 +278,7 @@ Define model variables, including column headers, variable names, and descriptio
 
 In addition to the standard CF variable attributes, each model variable should contain a `source` attribute that describes the origin of the data for this variable:
 
-- If the data is derived from observations, the `source` attribute should be set to "data-derived."
+- If the data is derived from observations, the `source` attribute **should be set to** "data-derived."
 - If the data is derived from an empirical formula, the `source` attribute should indicate how the variable was derived.
 
 For example:

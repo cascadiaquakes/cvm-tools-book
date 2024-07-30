@@ -119,4 +119,6 @@ After providing the file name, you will see a summary of the netCDF file content
     <figcaption>Summary of the netCDF file content.</figcaption>
 </figure>
 
-By going through this tutorial, we have created a netCDF file (`Cascadia-ANT+RF-test.nc`) from the `Cascadia_ANT+RF_Delph2018` model's raw data. Later, we will use the `cvm_slicer` tool to view the content of this file and extract data from it.
+## Step 8: Visualize Your New netCDF to Ensure the Proper File Conversion”
+
+By going through this tutorial, we have created a netCDF file (`Cascadia-ANT+RF-test.nc`) from the `Cascadia_ANT+RF_Delph2018` model's raw data. Use the < href="usage/cvm_slicer.html">cvm_slicer tool</a> to view the content of this file and extract data from it to ensure it is properly converted from your original data files.
