@@ -40,33 +40,14 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 ## Support Tools
 
-### verify_installation
+### hdf5_summary_info
 
-**Application**: Installation validation  
-**Description**: Ensure that all required packages are installed and that a specific netCDF file can be read successfully. This guide will walk you through how to use the script to verify your installation.
-.
+**Application**: HDF5 information extraction  
+**Description**: A utility tool designed to read and analyze HDF5 files. It provides a detailed summary of the file content, including global metadata, dimensions, and variables with their respective attributes and data ranges.
 
-**Usage**: Verify the installation.
+**Usage**: This script is for verifying the overall structure and integrity of HDF5 files, ensuring that they conform to expected formats and contain the necessary information for further processing or analysis.
 
-**Guide**: <a href="usage/verify_installation.html">verify_installation</a>
-
-### netcdf_to_geocsv
-
-**Application**: Format conversion  
-**Description**: Converts a CVM netCDF file to GeoCSV and/or outputs its metadata in JSON format.
-
-**Usage**: Convert a CVM netCDF file to GeoCSV format and/or output its metadata in JSON format.
-
-**Guide**: <a href="usage/netcdf_to_geocsv.html">netcdf_to_geocsv</a>
-
-### netcdf_to_cvm
-
-**Application**: Format conversion  
-**Description**: Converts a CF-compliant netCDF file to CVM netCDF standard.
-
-**Usage**: Convert a netCDF file to the CVM netCDF standard.
-
-**Guide**: <a href="usage/netcdf_to_cvm.html">netcdf_to_cvm</a>
+**Guide**: <a href="usage/hdf5_summary_info.html">hdf5_summary_info</a>
 
 ### netcdf_summary_info
 
@@ -77,14 +58,51 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Guide**: <a href="usage/netcdf_summary_info.html">netcdf_summary_info</a>
 
-### hdf5_summary_info
+### netcdf_to_cvm
 
-**Application**: HDF5 information extraction  
-**Description**: A utility tool designed to read and analyze HDF5 files. It provides a detailed summary of the file content, including global metadata, dimensions, and variables with their respective attributes and data ranges.
+**Application**: Format conversion  
+**Description**: Converts a CF-compliant netCDF file to CVM netCDF standard.
 
-**Usage**: This script is for verifying the overall structure and integrity of HDF5 files, ensuring that they conform to expected formats and contain the necessary information for further processing or analysis.
+**Usage**: Convert a netCDF file to the CVM netCDF standard.
 
-**Guide**: <a href="usage/hdf5_summary_info.html">hdf5_summary_info</a>
+**Guide**: <a href="usage/netcdf_to_cvm.html">netcdf_to_cvm</a>
+
+### netcdf_to_geocsv
+
+**Application**: Format conversion  
+**Description**: Converts a CVM netCDF file to GeoCSV and/or outputs its metadata in JSON format.
+
+**Usage**: Convert a CVM netCDF file to GeoCSV format and/or output its metadata in JSON format.
+
+**Guide**: <a href="usage/netcdf_to_geocsv.html">netcdf_to_geocsv</a>
+
+### netcdf_to_h5
+
+**Application**: Format conversion  
+**Description**: Converts a CVM-compliant netCDF file to CVM HDF5.
+
+**Usage**: Convert a netCDF file to the HDF5 format.
+
+**Guide**: <a href="usage/netcdf_to_hd.html">netcdf_to_hd\*</a>
+
+### show_file_structure
+
+**Application**: Format conversion  
+**Description**: Converts a CVM-compliant netCDF file to CVM HDF5.
+
+**Usage**: reads a file (either HDF5 or netCDF format) and prints its structure, including the file name, size, and type. It is useful for quickly inspecting the contents of the model data files.
+
+**Guide**: <a href="usage/show_file_structure.html">netcdf_to_hd\*</a>
+
+### verify_installation
+
+**Application**: Installation validation  
+**Description**: Ensure that all required packages are installed and that a specific netCDF file can be read successfully. This guide will walk you through how to use the script to verify your installation.
+.
+
+**Usage**: Verify the installation.
+
+**Guide**: <a href="usage/verify_installation.html">verify_installation</a>
 
 ### netcdf_to_geomodelgrids (under development)
 
