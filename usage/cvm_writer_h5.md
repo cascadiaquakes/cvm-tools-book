@@ -39,36 +39,36 @@ longitude latitude depth vs
     </figure>
 </div>
 
-### Step 3: Prepare the Metadata File
+### Step 3: Prepare the Global Metadata File
 
 Now, we need model metadata files. The metadata files contain the model metadata as text. Templates for the metadata files are available under the `template` folder. Two metadata files are needed: one global based on `template/global_metadata_template.txt` and another for variables based on `template/variables_metadata_template.txt`. When creating HDF5 files, we need one **data file** and one **variables_metadata file** per dataset. In this case, `Cascadia_ANT+RF_Delph2018` has only one dataset.
 
 For this tutorial, you do not need to copy templates. We already have the necessary metadata file for the global attributes as `Cascadia-ANT+RF_global_meta.txt` and for variables as `Cascadia-ANT+RF_meta.txt` placed under this directory.
 
 <figure>
-    <img src="../_images/step3_metadata_file.png" alt="Metadata File" width="500"/>
+    <img src="../_images/Cascadia-ANT+RF_global_meta.png" alt="Metadata File" width="500"/>
     <figcaption>A view of the global metadata file.</figcaption>
 </figure>
 
-These parameter files are the same as those used by the **cvm_writer** tool, but pay particular attention to the following HDF5-specific attributes in the parameter files where we define the HDF5 groupings:
-
-`Cascadia-ANT+RF_global_meta.txt` has the following definitions to define **groups** in our HDF5:
+These parameter files are the same as those used by the **cvm_writer** tool, but pay particular attention to the following HDF5-specific attributes in the parameter files where we define the HDF5 groupings. Under HDF5, the model values (3D data) are stored as dataset within the "volumes" group and other 2D data, such as elevation of surfaces are stored within the "surfaces" group. We use the groups parameter to assign our own group names. For example, we set the main groups as `MODEL` and `SURFACES` in the `Cascadia-ANT+RF_global_meta.txt` parameter file:
 
 ```bash
 > groups
-     volumes = volumes
-     surfaces = surfaces
+     volumes = MODEL
+     surfaces = SURFACES
 ```
 
 The **volumes** group will be used to store 3D data and the **surfaces** group will be used to store the 2D data. In our case, our data is 3D and the **volumes** group will be used.
 
-`Cascadia-ANT+RF_meta.txt` has the following definitions to define **dataset group** in our HDF5:
+### Step 4: Prepare the Variable Metadata File
+
+`Cascadia-ANT+RF_meta.txt` variables metadata file has the following definitions to define **dataset group** in our HDF5:
 
 ```bash
-- dataset_group = velocity
+- dataset_group = VELOCITY
 ```
 
-Since you only have one dataset, we can leave the **dataset_group** blank to store 3D data under the root **MODEL** group.
+**NOTE**: Since we only have one dataset in this tutorial, we can leave the **dataset_group** blank to store 3D data under the root **MODEL** group.
 
 ```bash
 - dataset_group =
@@ -76,7 +76,7 @@ Since you only have one dataset, we can leave the **dataset_group** blank to sto
 
 For detailed instructions on how to create these parameter files, see the **Parameter File Structure** guide.
 
-### Step 4: Create the Model HDF5 File
+### Step 5: Create the Model HDF5 File
 
 Now, create the model file by running:
 
@@ -91,7 +91,7 @@ python ../../src/cvm_writer_h5.py -m Cascadia-ANT+RF_meta.txt -g Cascadia-ANT+RF
 
 After running this command, you should see a new file `Cascadia-ANT+RF-test.h5`, which is our model in HDF5.
 
-### Step 5: View the HDF5 File Structure
+### Step 6: View the HDF5 File Structure
 
 To view the HDF5 file structure, use the `show_file_structure.py` script.
 
@@ -105,7 +105,7 @@ Provide the newly-generated HDF5 file name:
 
 `Enter the path to the input file (HDF5 or netCDF): Cascadia-ANT+RF-test.h5`
 
-See the file structure. In this case we set the dataset_group to blanks, so the dataset is placed under the **MODEL** group:
+See the file structure. In this case we set the `dataset_group` to blank, the dataset is placed under the **MODEL** group:
 
 ```bash
 File Name: Cascadia-ANT+RF-test.h5
@@ -122,7 +122,21 @@ HDF5 File Structure:
 │   ├── vs
 ```
 
-### Step 6: Examine the HDF5 File Content
+If we had assigned **VELOCITY** to the `dataset_group` to parameter, the dataset is placed under the **MODEL/VELOCITY** group and the file structure would have been:
+
+```bash
+HDF5 File Structure:
+├── MODEL
+│   ├── VELOCITY
+│   │   ├── depth
+│   │   ├── easting
+│   │   ├── latitude
+│   │   ├── longitude
+│   │   ├── northing
+│   │   ├── vs
+```
+
+### Step 7: Examine the HDF5 File Content
 
 To examine the HDF5 file content, use the `hdf5_summary_info.py` script to summarize the created HDF5 file. Upon execution, the script will prompt you for the name of the HDF5 file to summarize. It will then read the HDF5 file and provide a summary of the metadata and data contained in the file. Successful execution of this step indicates that the general structure of the HDF5 file is correct and allows you to examine the data and metadata contained in the file to verify.
 
