@@ -27,7 +27,7 @@ cd sample-files/Cascadia-ANT+RF-Delph2018
 
 Make sure the corresponding netCDF file exists (`Cascadia-ANT+RF-test.nc`).
 
-2. **Run the cvm_inspector tool**
+## Step 1: Run the cvm_inspector tool
 
 The tool will prompt you to input the netCDF file path to check:
 
