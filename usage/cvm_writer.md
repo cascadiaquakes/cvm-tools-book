@@ -119,6 +119,20 @@ After providing the file name, you will see a summary of the netCDF file content
     <figcaption>Summary of the netCDF file content.</figcaption>
 </figure>
 
-## Step 8: Visualize Your New netCDF to Ensure the Proper File Conversion”
+## Step 8: Validate the netCDF File Metadata
+
+To examine the netCDF file content, use the `cvm_inspector.py` tool to check the metadata, dimensions, coordinates, and variables of a netCDF file. The tool provides a comprehensive inspection of the file and ensures compliance with the CF convention (see <a href="cvm_inspector.html">cvm_inspector tool</a>).
+
+The tool will prompt you to input the netCDF file path to check:
+
+```
+ ../../src/cvm_inspector.py
+ Please enter the file name:
+
+```
+
+Enter the file name and the inspector start checking the file's metadata.
+
+## Step 9: Visualize Your New netCDF to Ensure the Proper File Conversion”
 
 By going through this tutorial, we have created a netCDF file (`Cascadia-ANT+RF-test.nc`) from the `Cascadia_ANT+RF_Delph2018` model's raw data. Use the <a href="cvm_slicer.html">cvm_slicer tool</a> to view the content of this file and extract data from it to ensure it is properly converted from your original data files.
