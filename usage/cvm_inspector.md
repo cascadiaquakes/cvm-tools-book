@@ -17,15 +17,13 @@ The netCDF file inspector is a Python script that examines the following aspects
 - CF (Climate and Forecast) compliance
 - Variables (model and coordinate) along with their attributes
 
-## Steps
+## Step 1: Navigate to the model directory
 
-1. **Navigate to the model directory**
+Change your directory to the location of the model file:
 
-   Change your directory to the location of the model file:
-
-   ```
-   cd sample-files/Cascadia-ANT+RF-Delph2018
-   ```
+```
+cd sample-files/Cascadia-ANT+RF-Delph2018
+```
 
 Make sure the corresponding netCDF file exists (`Cascadia-ANT+RF-test.nc`).
 
@@ -45,7 +43,7 @@ Enter the file name and the inspector start checking the file's metadata.
 Please enter the file name: Cascadia-ANT+RF-test.nc
 ```
 
-### 2.1 NetCDF File Check
+### Step 2.1 Check the netCDF file's info
 
 This section provides basic details about the file, such as:
 
@@ -53,7 +51,7 @@ This section provides basic details about the file, such as:
 - **File Size**: The size of the file in megabytes.
 - **File Type**: The type of NetCDF file, which should be ` NetCDF-4 Classic Model`
 
-### 2.2 Metadata Inspection Summary
+### Step 2.2 Check the Metadata Inspection Report
 
 A comprehensive summary of the metadata is provided here, including:
 
@@ -65,7 +63,7 @@ A comprehensive summary of the metadata is provided here, including:
 - **CF Compliance Check**: Uses the `cfchecks` tool to assess whether the file complies with CF conventions.
 - **Variables Summary**: Lists all variables, distinguishing between coordinate variables and model variables. For each variable, the script provides the range of values, units, and dimensions.
 
-### 2.3 Example Output
+## Example Output
 
 Example output for a NetCDF-4 file:
 
