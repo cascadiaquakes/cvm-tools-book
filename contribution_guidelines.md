@@ -23,10 +23,14 @@ If your original model is in a valid netCDF3 or netCDF4 Classic format, please f
 
 #### Model File Validation
 
-##### Validating netCDF Files
+##### Validating netCDF Files and Creating the metadata JSON file
 
-- For models in netCDF format, please verify their metadata and create a slice to validate the file content using <a href="usage/cvm_slicer.html" target="_blank">cvm_slicer</a>.
+- Please verify the netCDF file's metadata content using <a href="usage/cvm_inspector.html" target="_blank">cvm_inspector</a>.
+
+- Please verify the netCDF file's metadata and create a slice to validate the file content using <a href="usage/cvm_slicer.html" target="_blank">cvm_slicer</a>.
+
+- Use the <a href="usage/netcdf_to_geocsv.html" target="_blank">netcdf_to_geocsv</a> tool with `-m true` option to create a JSON file containing your files metadata.
 
 ##### Validating HDF5 Files
 
-- For models in HDF5 format, please verify their metadata and create a slice to validate the file content using the **cvm_slicer_h5 Tool (coming soon)**.
+- Please verify their metadata and create a slice to validate the file content using the **cvm_slicer_h5 Tool (coming soon)**.
