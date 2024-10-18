@@ -1,4 +1,4 @@
-# cvm_writer
+# cvm_writer 2D
 
 In this tutorial, we will use the `cvm_writer` tool to convert the raw 2D data (latitude, and longitude coordinates) for the `McCroryetal-2012` model into netCDF. These data are from <a href="https://doi.org/10.1029/2012JB009407" target="_blank">McCrory et al.</a> that represent depth to the Juan de Fuca slab beneath the Cascadia subduction margin.
 
