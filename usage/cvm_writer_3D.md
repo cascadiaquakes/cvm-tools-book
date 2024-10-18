@@ -1,6 +1,6 @@
 # cvm_writer
 
-In this tutorial, we will use the `cvm_writer` tool to convert the `Cascadia_ANT+RF_Delph2018` raw data into CVM model files. Specifically, we aim to convert a CSV model to netCDF and GeoCSV formats. To achieve this, we need:
+In this tutorial, we will use the `cvm_writer` tool to convert the `Cascadia_ANT+RF_Delph2018` raw 3D data (latitude, longitude, and depth coordinates) into CVM model files. Specifically, we aim to convert a CSV model to netCDF and GeoCSV formats. To achieve this, we need:
 
 - The model data in CSV format
 - A global parameter file

@@ -14,7 +14,8 @@ parts:
     chapters:
       - file: usage/overview
       - file: usage/parameter_file
-      - file: usage/cvm_writer
+      - file: usage/cvm_writer_2d
+      - file: usage/cvm_writer_3d
       - file: usage/cvm_writer_h5
       - file: usage/cvm_slicer
   - caption: "Utility Tools"
