@@ -76,6 +76,15 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Guide**: <a href="usage/netcdf_to_geocsv.html">netcdf_to_geocsv</a>
 
+### netcdf-2d_to_geojson
+
+**Application**: Format conversion  
+**Description**: Converts a CVM netCDF or a GMT .grd file to GeoJSON.
+
+**Usage**: To converts 2D netCDF (.nc) or .grd files into GeoJSON format, supporting rectangular and triangular grid representations. It can handle depth or elevation variables and allows decimation of data to improve performance.
+
+**Guide**: <a href="usage/netcdf-2d_to_geojson.html">netcdf-2d_to_geojson</a>
+
 ### netcdf_to_h5
 
 **Application**: Format conversion  
