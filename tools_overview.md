@@ -9,7 +9,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 ### cvm_writer
 
 **Application**: Metadata and data storage  
-**Description**: Reads a text model metadata file and outputs the corresponding model metadata in GeoCSV and JSON formats. If a CSV model data file is also provided, the output can include the model in GeoCSV and/or netCDF formats.
+**Description**: Reads a text 2D or 3D model metadata file and outputs the corresponding model metadata in GeoCSV and JSON formats. If a CSV model data file is also provided, the output can include the model in GeoCSV and/or netCDF formats.
 
 **Usage**: Output metadata and/or model based on an input parameter file and a given CSV data file. The output can be one or more of the following:
 
