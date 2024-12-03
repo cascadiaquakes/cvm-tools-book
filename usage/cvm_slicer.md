@@ -1,6 +1,6 @@
 # cvm_slicer
 
-The `cvm_slicer` tool allows for interactive extraction and plotting of data from a CVM netCDF file. This tutorial guides you through using `cvm_slicer` on the `Cascadia-ANT+RF-Delph2018` model we created with `cvm_writer`.
+The `cvm_slicer` tool allows for interactive extraction and plotting of data from a CVM netCDF file (2D and 3D). This tutorial guides you through using `cvm_slicer` on the `Cascadia-ANT+RF-Delph2018` model we created with `cvm_writer`.
 
 ## Prerequisites
 
@@ -162,3 +162,5 @@ NOTES: [INFO] grid_mapping_name is latitude_longitude
 ## Conclusion
 
 Follow the same logic as the two examples above to explore other types of plots and data extractions available via the `cvm_slicer` tool.
+
+For 2D netCDF files, the process remains the same, with the exception that only 2D surface plots are supported.
