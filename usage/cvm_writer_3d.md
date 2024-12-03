@@ -138,6 +138,6 @@ Enter the file name and the inspector start checking the file's metadata.
 
 ```
 
-## Step 9: Visualize Your New netCDF to Ensure the Proper File Conversion”
+## Step 9: Visualize Your New netCDF to Ensure the Proper File Conversion
 
 By going through this tutorial, we have created a netCDF file (`Cascadia-ANT+RF-test.nc`) from the `Cascadia_ANT+RF_Delph2018` model's raw data. Use the <a href="cvm_slicer.html">cvm_slicer tool</a> to view the content of this file and extract data from it to ensure it is properly converted from your original data files.

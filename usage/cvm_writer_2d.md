@@ -232,6 +232,6 @@ Model Variables:
 
 ```
 
-## Step 9: Visualize Your New 2D netCDF to Ensure the Proper File Conversion”
+## Step 9: Visualize Your New 2D netCDF to Ensure the Proper File Conversion
 
 By going through this tutorial, we have created a 2D netCDF file (`McCroryetal-2012.nc`). Use the <a href="cvm_slicer.html">cvm_slicer tool</a> to create surface plots from this file and extract data from it to ensure it is properly converted from your original data files.
