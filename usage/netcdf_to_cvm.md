@@ -82,7 +82,7 @@ In this tutorial, we will demonstrate how to run `netcdf_to_cvm` on a CVM netCDF
 
    ```
 
-   ../../src/netCDF_summary_info.py
+   ../../src/netcdf_summary_info.py
    Enter the path to the netCDF file:
 
    ```

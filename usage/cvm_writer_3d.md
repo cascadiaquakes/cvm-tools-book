@@ -99,12 +99,12 @@ If you created GeoCSV or JSON metadata files in step 4 above, look at these file
 
 ## Step 7: Examine the netCDF File Content
 
-To examine the netCDF file content, use the `netCDF_summary_info.py` script to summarize the created netCDF file. Upon execution, the script will prompt you for the name of the netCDF file to summarize. It will then read the netCDF file and provide a summary of the metadata and data contained in the file. Successful execution of this step indicates that the general structure of the netCDF file is correct and allows you to examine the data and metadata contained in the file to verify.
+To examine the netCDF file content, use the `netcdf_summary_info.py` script to summarize the created netCDF file. Upon execution, the script will prompt you for the name of the netCDF file to summarize. It will then read the netCDF file and provide a summary of the metadata and data contained in the file. Successful execution of this step indicates that the general structure of the netCDF file is correct and allows you to examine the data and metadata contained in the file to verify.
 
 Run the following command:
 
 ```
-python ../../src/netCDF_summary_info.py
+python ../../src/net_summary_info.py
 ```
 
 <figure>
