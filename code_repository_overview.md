@@ -33,6 +33,7 @@ The CVM-Tools are hosted on GitHub at [https://github.com/cascadiaquakes/cvm-too
     - `casc16-velmdl_meta.txt`
     - `simple_plotter_prop.py`
 - **src/**: Source code for the tools.
+  - `convert_to_csv_2d.md`,
   - `cvm_slicer.py`
   - `cvm_writer.py`
   - `cvm_writer_h5.py`

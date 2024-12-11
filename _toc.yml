@@ -20,6 +20,7 @@ parts:
       - file: usage/cvm_slicer
   - caption: "Utility Tools"
     chapters:
+      - file: usage/convert_to_csv_2d
       - file: usage/cvm_inspector
       - file: usage/hdf5_summary_info
       - file: usage/netcdf_summary_info

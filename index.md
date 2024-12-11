@@ -25,6 +25,7 @@ The **Primary Tools** section provides tutorials on the primary CVM tools that a
 
 The **Utility Tools** section provides tutorials on various CVM utility tools to help with data conversion and inspection of CVM files. These tools include:
 
+- **convert_to_csv_2d:** A utility tool for converting 2D NetCDF or GeoJSON files to CSV format, extracting coordinate data (`x`, `y`) and associated metadata or attributes.
 - **netcdf_to_geocsv:** A utility tool for converting a netCDF CVM file to the corresponding CSV, GeoCSV format and optionally output its JSON metadata.
 - **netcdf_to_h5:** A utility tool for converting an existing CVM-compliant netCDF file to HDF5 format.
 - **netcdf_to_cvm:** A utility tool for converting an existing netCDF CVM file to the corresponding CVM-compliant netCDF file. This tool will add any missing CVM attributes based on the provided metadata files.
