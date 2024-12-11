@@ -69,7 +69,7 @@ python ../../src/netcdf-2d_to_geojson.py
 
 2D netCDF/.grd file to GeoJSON Converter!
 
-Enter the path to the input NetCDF/GRD file [default: input.nc]: McCroryetal-2012.nc
+Enter the path to the input netCDF/GRD file [default: input.nc]: McCroryetal-2012.nc
 Enter the path to save the GeoJSON output [default: output.geojson]: McCroryetal-2012.geojson
 Enter the name of the latitude variable [default: latitude]: lat
 Enter the name of the longitude variable [default: longitude]: lon

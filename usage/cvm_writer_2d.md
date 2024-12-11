@@ -118,13 +118,13 @@ Run the following command:
 ```
 python ../../src/netcdf_summary_info.py
 
-Enter the path to the NetCDF file: McCroryetal-2012.nc
+Enter the path to the netCDF file: McCroryetal-2012.nc
 ```
 
 After providing the file name, you will see a summary of the netCDF file content.
 
 ```
-Summary of NetCDF file: McCroryetal-2012.nc
+Summary of netCDF file: McCroryetal-2012.nc
 
 Global Attributes:
 
@@ -161,7 +161,7 @@ The tool will prompt you to input the netCDF file path to check:
 
 Please enter the file name: McCroryetal-2012.nc
 
-=== NetCDF File Check ===
+=== netCDF File Check ===
 File: McCroryetal-2012.nc
 Size: 5.99 MB
 File Type: Unknown

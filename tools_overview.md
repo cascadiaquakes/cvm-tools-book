@@ -43,9 +43,9 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 ### convert_to_csv_2d
 
 **Application**: Format conversion  
-**Description**: Converts 2D NetCDF or GeoJSON files to CSV format.
+**Description**: Converts 2D netCDF or GeoJSON files to CSV format.
 
-**Usage**: Converts 2D NetCDF (.nc) or GeoJSON files into CSV format, extracting coordinate data (`x`, `y`) and associated metadata or attributes. Supports features like handling missing values and flattening multi-point geometries.
+**Usage**: Converts 2D netCDF (.nc) or GeoJSON files into CSV format, extracting coordinate data (`x`, `y`) and associated metadata or attributes. Supports features like handling missing values and flattening multi-point geometries.
 
 **Guide**: <a href="usage/convert_to_csv_2d.html">convert_to_csv_2d</a>
 

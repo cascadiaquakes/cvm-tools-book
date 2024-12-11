@@ -6,7 +6,7 @@ In this tutorial, we will demonstrate how to run `netcdf_to_cvm` on the CVM netC
 
 ## Overview
 
-The netCDF file inspector is a Python script that examines the following aspects of a NetCDF file:
+The netCDF file inspector is a Python script that examines the following aspects of a netCDF file:
 
 - File type and size
 - Dimensions and their sizes
@@ -49,7 +49,7 @@ This section provides basic details about the file, such as:
 
 - **File Path**: The location of the file on your machine.
 - **File Size**: The size of the file in megabytes.
-- **File Type**: The type of NetCDF file, which should be ` NetCDF-4 Classic Model`
+- **File Type**: The type of netCDF file, which should be ` netCDF-4 Classic Model`
 
 ### Step 2.2 Check the Metadata Inspection Report
 
@@ -65,7 +65,7 @@ A comprehensive summary of the metadata is provided here, including:
 
 ## Example Output
 
-Example output for a NetCDF-4 file:
+Example output for a netCDF-4 file:
 
 ```
 === Dimensions and Sizes ===
@@ -118,7 +118,7 @@ Model Variables:
 
 === Metadata Inspection Summary ===
 
-File Type: NetCDF-4
+File Type: netCDF-4
 Dimensions:
   - depth: 84
   - latitude: 46
