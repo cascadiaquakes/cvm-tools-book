@@ -65,7 +65,7 @@ To ensure consistency and compatibility, the use of model variables conforming t
 | **Love Group**        | (km/s or m/s)                                                 |
 | **Depth**             | (km or m – positive downwards) (only for surfaces/interfaces) |
 
-If a model variable cannot be selected from this list, an addition or clarification ios required.
+If a model variable cannot be selected from this list, an addition or clarification is required.
 
 ## Metadata
 
