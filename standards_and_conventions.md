@@ -114,7 +114,4 @@ For the primary coordinate systems, the variables should be:
 | `longitude` and `latitude`   | `x` and `y`               |
 
 If the primary coordinate variables are `longitude` and `latitude`, the auxiliary coordinates will be UTM's `easting` and `northing`. Conversely, if the primary coordinate system is UTM, the primary coordinate variables will be `x` and `y` (representing UTM easting and northing values, respectively), and the auxiliary coordinates will be the geographic `longitude`and `latitude` variables.
-
-## Development Environment
-
-All tools are developed using Python 3. It is recommended to use Python 3.9 or later for compatibility and optimal performance.
+.

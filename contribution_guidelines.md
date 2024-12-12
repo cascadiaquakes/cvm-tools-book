@@ -17,7 +17,7 @@ To ensure your model complies with CVM standards, please follow the following co
 
 ##### CSV to netCDF4 or HDF5
 
-- If your original model is in CSV format and you want to convert it to netCDF4, please follow the steps outlined under <a href="./usage/cvm_writer.html" target="_blank">cvm_writer</a>.
+- If your original model is in CSV format and you want to convert it to netCDF4, please follow the steps outlined under <a href="./usage/cvm_writer_3d.html" target="_blank">cvm_writer_3D</a> or <a href="./usage/cvm_writer_2d.html" target="_blank">cvm_writer_2D</a> for the 3D and 2D models respectively.
 - If you want to convert your CSV files to HDF5 format, please follow the steps outlined under <a href="./usage/cvm_writer_h5.html" target="_blank">cvm_writer_h5</a>.
 
 ##### netCDF to CVM-compatible netCDF4
