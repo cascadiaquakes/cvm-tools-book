@@ -48,6 +48,25 @@ In addition to the primary formats (netCDF and HDF5), the CVM-Tools also support
 | ASCII         | SPECFEM          | A format used for specific geophysical modeling applications ([more](https://specfem.org/))                                                                                                                                                |
 | GeoModelGrids | GeoModelGrids    | A specialized format for geophysical and geological models ([more](https://geomodelgrids.readthedocs.io/en/latest/))                                                                                                                       |
 
+## Model Variable Naming and Unit Requirements
+
+To ensure consistency and compatibility, the use of model variables conforming to the following list of variable names and units is required. Please adhere to these naming conventions and units when submitting or utilizing CVM tools.
+
+| **Variable Name**     | **Units**                                                     |
+| --------------------- | ------------------------------------------------------------- |
+| **Vs**                | (km/s or m/s)                                                 |
+| **Vp**                | (km/s or m/s)                                                 |
+| **Vs (perturbation)** |                                                               |
+| **Vp (perturbation)** |                                                               |
+| **Density**           | (kg/m³ or g/cm³)                                              |
+| **Rayleigh Phase**    | (km/s or m/s)                                                 |
+| **Love Phase**        | (km/s or m/s)                                                 |
+| **Rayleigh Group**    | (km/s or m/s)                                                 |
+| **Love Group**        | (km/s or m/s)                                                 |
+| **Depth**             | (km or m – positive downwards) (only for surfaces/interfaces) |
+
+If a model variable cannot be selected from this list, an addition or clarification ios required.
+
 ## Metadata
 
 All CVM files include extensive metadata that follow the [CF Metadata Conventions](https://cfconventions.org/) and, as needed, introduce additional attributes like `source` data variable attribute and `data_layout` global attribute.

@@ -2,11 +2,16 @@
 
 To contribute your Cascadia Earth model to CRESCENT:
 
-- The model must be for the CRESCENT study area (latitude: 39° to 52°, longitude: -130° to -116°)
-- The file format should be either CVM-compatible netCDF4 Classic or CVM-compatible HDF5 format.
-- <a href ="https://cvmweb-albfa-xk4p5bggbtl6-1199205512.us-east-2.elb.amazonaws.com/request" target="_blank">Contact us to request a model submission</a>
+### How to Contribute Your Cascadia Earth Model to CRESCENT
 
-### Preparing Your Model
+To contribute your Cascadia Earth model to CRESCENT:
+
+- **Study Area Requirement**: The model must cover the CRESCENT study area (latitude: 39° to 52°, longitude: -130° to -116°).
+- **Standards Compliance**: All models must adhere to the [CVM Standards and Conventions](standards_and_conventions.html).
+- **Model Preparation**: Follow the steps outlined in the **How to Prepare Your Model** section below.
+- **Submission Request**: Visit the [CRESCENT-CVM GitHub Issue Page](https://github.com/cascadiaquakes/CRESCENT-CVM/issues) and create a submission request. ****Your request should include a download link for your model****.
+
+### How to Prepare Your Model
 
 To ensure your model complies with CVM standards, please follow the following conversion and validation steps depending on your original model's data format.
 
