@@ -52,18 +52,18 @@ In addition to the primary formats (netCDF and HDF5), the CVM-Tools also support
 
 To ensure consistency and compatibility, the use of model variables conforming to the following list of variable names and units is required. Please adhere to these naming conventions and units when submitting or utilizing CVM tools.
 
-| **Variable Name**     | **Units**                                                     |
-| --------------------- | ------------------------------------------------------------- |
-| **Vs**                | (km/s or m/s)                                                 |
-| **Vp**                | (km/s or m/s)                                                 |
-| **Vs (perturbation)** |                                                               |
-| **Vp (perturbation)** |                                                               |
-| **Density**           | (kg/m³ or g/cm³)                                              |
-| **Rayleigh Phase**    | (km/s or m/s)                                                 |
-| **Love Phase**        | (km/s or m/s)                                                 |
-| **Rayleigh Group**    | (km/s or m/s)                                                 |
-| **Love Group**        | (km/s or m/s)                                                 |
-| **Depth**             | (km or m – positive downwards) (only for surfaces/interfaces) |
+| **Variable Name**   | **Units**                                                     |
+| ------------------- | ------------------------------------------------------------- |
+| **Vs**              | (km/s, km.s-1 or m/s, m.s-1)                                  |
+| **Vp**              | (km/s, km.s-1 or m/s, m.s-1)                                  |
+| **Vs_perturbation** |                                                               |
+| **Vp_perturbation** |                                                               |
+| **Density**         | (kg/m3, kg.m-3 or g/cm3, g.cm-3)                              |
+| **Rayleigh_Phase**  | (km/s, km.s-1 or m/s, m.s-1)                                  |
+| **Love_Phase**      | (km/s, km.s-1 or m/s, m.s-1)                                  |
+| **Rayleigh_Group**  | (km/s, km.s-1 or m/s, m.s-1)                                  |
+| **Love_Group**      | (km/s, km.s-1 or m/s, m.s-1)                                  |
+| **Depth**           | (km or m – positive downwards) (only for surfaces/interfaces) |
 
 If a model variable cannot be selected from this list, an addition or clarification is required.
 
