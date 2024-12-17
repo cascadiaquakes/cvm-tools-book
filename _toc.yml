@@ -13,7 +13,8 @@ parts:
   - caption: "Primary Tools"
     chapters:
       - file: usage/overview
-      - file: usage/parameter_file
+      - file: usage/global_metadata
+      - file: usage/variables_metadata
       - file: usage/cvm_writer_2d
       - file: usage/cvm_writer_3d
       - file: usage/cvm_writer_h5
