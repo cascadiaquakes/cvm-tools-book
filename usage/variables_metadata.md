@@ -122,7 +122,7 @@ Define auxiliary X and Y coordinates, if necessary.
 
 A compilation of model variables metadata, including column headers, variable names, and descriptions.
 
-**_Important_**: See the **Model Variable Naming and Unit Requirements** under the <a href="../standards_and_conventions.html" target="_blank">Standards and Conventions</a> for model name and unit rules.
+**_Important_**: See the **Model Variable Naming and Unit Requirements** under the <a href="../standards_and_conventions.html" target="_blank">Standards and Conventions</a> for model variable names and units rules.
 
 Add a `>>` subgroup for as many variables as needed.
 
