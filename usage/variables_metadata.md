@@ -1,4 +1,4 @@
-# Variables Metadata File Structure
+# Variable's Metadata File Structure
 
 When converting model data to netCDF or HDF5, it is essential to provide detailed model metadata. In this guide, we will explore how to construct metadata using parameter files. These parameter files follow specific rules and conventions, ensuring consistency and compliance with the CF Metadata Conventions.
 
