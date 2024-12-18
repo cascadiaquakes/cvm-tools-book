@@ -65,7 +65,7 @@ To ensure consistency and compatibility, the use of model variables conforming t
 | **Love_Group**      | (km/s, km.s-1 or m/s, m.s-1)                                  |
 | **Depth**           | (km or m – positive downwards) (only for surfaces/interfaces) |
 
-If a model variable cannot be selected from this list, an addition or clarification is required.
+If a model variable cannot be selected from the list above, additional clarification or guidance may be required. Please file an issue on the <a href="https://github.com/cascadiaquakes/CRESCENT-CVM/issues" target="_blank">CRESCENT-CVM GitHub Issue Page</a> for assistance.
 
 ## Metadata
 
