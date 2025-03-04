@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The [CVM-Tools repository](https://github.com/cascadiaquakes/CRESCENT-CVM) hosts Python 3 tools developed to support the Cascadia Community Velocity Model ([CVM](https://cascadiaquakes.org/cvm/)) working group's effort in constructing a three-dimensional representation of subsurface material properties for the Cascadia region. These tools facilitate the storage, extraction, and visualization of the CVM through uniform and self-contained data formats.
+The [CVM-Tools repository](https://github.com/cascadiaquakes/CRESCENT-CVM) hosts `Python 3` tools developed to support the Cascadia Community Velocity Model ([CVM](https://cascadiaquakes.org/cvm/)) working group's effort in constructing a three-dimensional representation of subsurface material properties for the Cascadia region. These tools facilitate the storage, extraction, and visualization of the CVM through uniform and self-contained data formats.
 
 ## About This Tutorial
 
