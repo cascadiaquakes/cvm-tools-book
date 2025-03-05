@@ -2,7 +2,8 @@
 
 To contribute your Cascadia Earth model to CRESCENT:
 
-- **Study Area Requirement**: The model must cover the CRESCENT study area (latitude: 39° to 52°, longitude: -130° to -116°).
+- **Study Area Requirement**: The majority of the model must fall within the CRESCENT CVM footprint (latitude: 39° to 52°, longitude: -130° to -116°) or be completely contained in it.
+- **Peer-reviewed**: All models must be published in a peer-reviewed paper. Include a publicly accessible download link to the peer-reviewed article describing this model to the submission.
 - **Standards Compliance**: All models must adhere to the <a href="./standards_and_conventions.html" target="_blank">CVM Standards and Conventions</a>.
 - **Model Preparation**: Follow the steps outlined in the **How to Prepare Your Model** section below.
 - **Submission Request**: Visit the <a href="https://github.com/cascadiaquakes/CRESCENT-CVM/issues" target="_blank">CRESCENT-CVM GitHub Issue Page</a> and create a submission request.
