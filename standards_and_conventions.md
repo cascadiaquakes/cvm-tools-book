@@ -67,6 +67,11 @@ To ensure consistency and compatibility, the use of model variables conforming t
 
 If a model variable cannot be selected from the list above, additional clarification or guidance may be required. Please file an issue on the <a href="https://github.com/cascadiaquakes/CRESCENT-CVM/issues" target="_blank">CRESCENT-CVM GitHub Issue Page</a> for assistance.
 
+**Note**: For 3D models, the positive attribute for the vertical axis should be explicitly defined. When using depth, setting it to **positive down** is highly recommended because:
+
+- Most oceanographic and geophysical models follow this convention.
+- It ensures compatibility with common analysis tools, which typically assume depth increases downward.
+
 ## Metadata
 
 All CVM files include extensive metadata that follow the [CF Metadata Conventions](https://cfconventions.org/) and, as needed, introduce additional attributes like `source` data variable attribute and `data_layout` global attribute.
