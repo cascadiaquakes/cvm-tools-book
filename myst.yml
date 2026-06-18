@@ -1,0 +1,62 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 3d6081d3-ae9d-41b4-b2d1-04fea4b4281b
+  title: CRESCENT Community Velocity Model Repository and Tools
+  description: Descriptions of catalogs in the CRESCENT CVM repositoryl, python tools for model manipulation, and submission instructions
+  # keywords: []
+  # authors: []
+  # github:
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  
+  toc:
+    - file: index.md
+    - title: Introduction
+      children:
+        - file: standards_and_conventions.md
+        - file: code_repository_overview.md
+        - file: setup_guide.md
+        - file: tools_overview.md
+    # --- Catalog Descriptions ---
+    - title: Catalogs
+      children:
+        - file: 3Dmodels/delph_epsl_2018.md
+          title: Delph et al. (2018)
+		  
+    - title: Primary Tools
+      children:
+        - file: usage/overview.md
+        - file: usage/global_metadata.md
+        - file: usage/variables_metadata.md
+        - file: usage/cvm_writer_2d.md
+        - file: usage/cvm_writer_3d.md
+        - file: usage/cvm_writer_h5.md
+        - file: usage/cvm_slicer.md
+    - title: Utility Tools
+      children:
+        - file: usage/convert_to_csv_2d.md
+        - file: usage/cvm_inspector.md
+        - file: usage/hdf5_summary_info.md
+        - file: usage/netcdf_summary_info.md
+        - file: usage/netcdf_to_cvm.md
+        - file: usage/netcdf-2d_to_geojson.md
+        - file: usage/netcdf_to_geocsv.md
+        - file: usage/netcdf_to_h5.md
+        - file: usage/show_file_structure.md
+        - file: usage/verify_installation.md
+    - title: Contact Us
+      children:
+        - file: contribution_guidelines.md
+        - file: contributions_feedback.md
+
+site:
+  template: book-theme
+  options:
+    favicon: crescent_circle.png
+    logo: Crescent_logo.png
+    style: _overrides/custom.css
+	
+html:
+  theme:
+    options:
+      collapse_navigation: false
