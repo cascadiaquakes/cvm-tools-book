@@ -42,10 +42,14 @@ jobs:
         path: _build/.jupyter_cache
         key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
 
-    # Build the book
+    # Build the book.
+    # Jupyter Book v2 (which is what `pip install jupyter-book` actually
+    # installs now, on top of the MyST Document Engine) replaces the old
+    # `jupyter-book build .` invocation with `jupyter book build --html`.
+    # The old syntax silently produces an EISDIR error and no output.
     - name: Build the book
       run: |
-        jupyter-book build .
+        jupyter book build --html
 
     - name: Create _images directory and copy images
       run: |
