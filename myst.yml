@@ -22,7 +22,7 @@ project:
       children:
         - file: 3Dmodels/delph_epsl_2018.md
           title: Delph et al. (2018)
-		  
+
     - title: Primary Tools
       children:
         - file: usage/overview.md
@@ -55,8 +55,3 @@ site:
     favicon: crescent_circle.png
     logo: Crescent_logo.png
     style: _overrides/custom.css
-	
-html:
-  theme:
-    options:
-      collapse_navigation: false
