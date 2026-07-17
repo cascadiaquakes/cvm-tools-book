@@ -4,7 +4,7 @@
 
 Jonathan R. Delph, Alan Levander, and Fenglin Niu
 
-[![DOI](https://img.shields.io/badge/DOI-10.1029%2018GL079518-blue)](https://doi.org/10.1029/2018GL079518)
+[![DOI](https://img.shields.io/badge/DOI-10.1029%2F2018GL079518-blue)](https://doi.org/10.1029/2018GL079518)
 
 :::{figure} ../images/delph_epsl_2018.jpg
 :label: fig:{vs_fig}
@@ -16,8 +16,15 @@ Shear wave velocity (Vs) structure of the Cascadian margin. (a) Average Vs in lo
 
 The dehydration of oceanic slabs during subduction is mainly thermally controlled and is often expressed as intermediate-depth seismicity. In warm subduction zones, shallow dehydration can also lead to the buildup of pore-fluid pressure near the plate interface, resulting in nonvolcanic tremor. Along the Cascadia margin, tremor density and intermediate-depth seismicity correlate but vary significantly from south to north despite little variation in the thermal structure of the Juan de Fuca Plate. Along the northern and southern Cascadia margin, intermediate-depth seismicity likely corresponds to increased fluid flux, while increased tremor density may result from fluid infiltration into thick underthrust metasediments characterized by very slow shear wave velocities (<3.2 km/s). In central Cascadia, low intermediate-depth seismicity and tremor density may indicate a lower fluid flux, and shear wave velocities indicate that the Siletzia terrane extends to the plate interface. These results indicate that the presence of thick underthrust sediments is associated with increased tremor occurrence.
 
-## Catalog Summary
+## Model Information
 
-- **REGION:** Cascadia Margin
-- **TIME SPAN:** 2012-09-24 to 2013-10-03
-- **MODEL TYPE:** V$_s$
+- **SUMMARY:** Joint inversion of ambient noise Rayleigh wave phase dispersion measurements (8-50 seconds) and adaptive CCP-derived receiver functions 
+- **MODEL TYPE:** V$_s$ and Rayleigh wave phase dispersion
+- **MINIMUM LONGITUDE:** -124.8
+- **MAXIMUM LONGITUDE:** -120
+- **LONGITUDE RESOLUTION:** 0.2
+- **MINIMUM LATITUDE:** 40
+- **MAXIMUM LATITUDE:** 49
+- **LATITUDE RESOLUTION:** 1
+- **MINIMUM DEPTH:** -3 km
+- **MAXIMUM DEPTH:** 80 km

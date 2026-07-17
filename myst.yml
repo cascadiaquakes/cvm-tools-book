@@ -17,11 +17,23 @@ project:
         - file: code_repository_overview.md
         - file: setup_guide.md
         - file: tools_overview.md
-    # --- Catalog Descriptions ---
-    - title: Catalogs
+    # --- 3D Model Descriptions ---
+    - title: 3D Models
       children:
         - file: 3Dmodels/delph_epsl_2018.md
           title: Delph et al. (2018)
+        - file: 3Dmodels/ashraf_jgr_2025.md
+          title: Ashraf et al. (2025)
+        - file: 3Dmodels/janiszewski_gji_2019.md
+          title: Janiszewski et al. (2019)
+        - file: 3Dmodels/porritt_epsl_2011.md
+          title: Porritt et al. (2011)
+        - file: 3Dmodels/savard_g3_2018.md
+          title: Savard et al. (2018)
+        - file: 3Dmodels/rodgers_grl_2024.md
+          title: Rodgers et al. (2024)
+        - file: 3Dmodels/stephenson_ofr_2019.md
+          title: Stephenson et al. (2019)
 
     - title: Primary Tools
       children:
