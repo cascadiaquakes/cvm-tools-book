@@ -17,24 +17,43 @@ project:
         - file: code_repository_overview.md
         - file: setup_guide.md
         - file: tools_overview.md
+		  
     # --- 3D Model Descriptions ---
     - title: 3D Models
       children:
-        - file: 3Dmodels/delph_epsl_2018.md
-          title: Delph et al. (2018)
-        - file: 3Dmodels/ashraf_jgr_2025.md
-          title: Ashraf et al. (2025)
-        - file: 3Dmodels/janiszewski_gji_2019.md
-          title: Janiszewski et al. (2019)
         - file: 3Dmodels/porritt_epsl_2011.md
           title: Porritt et al. (2011)
+        - file: 3Dmodels/delph_epsl_2018.md
+          title: Delph et al. (2018)
         - file: 3Dmodels/savard_g3_2018.md
           title: Savard et al. (2018)
-        - file: 3Dmodels/rodgers_grl_2024.md
-          title: Rodgers et al. (2024)
+        - file: 3Dmodels/janiszewski_gji_2019.md
+          title: Janiszewski et al. (2019)
         - file: 3Dmodels/stephenson_ofr_2019.md
           title: Stephenson et al. (2019)
-
+        - file: 3Dmodels/rodgers_grl_2024.md
+          title: Rodgers et al. (2024)
+        - file: 3Dmodels/ashraf_jgr_2025.md
+          title: Ashraf et al. (2025)
+        - file: 3Dmodels/he_jgr_2026.md
+          title: He et al. (2026)
+		
+    # --- 2D Model Descriptions ---
+    - title: 2D Models
+      children:
+        - file: 2Dmodels/mccrory_jgr_2012.md
+          title: McCrory et al. (2012)
+        - file: 2Dmodels/hayes_science_2018.md
+          title: Hayes et al. (2018)
+        - file: 2Dmodels/graham_g3_2018.md
+          title: Graham et al. (2018)
+        - file: 2Dmodels/delph_epsl_2021.md
+          title: Delph et al. (2021)
+        - file: 2Dmodels/carbotte_sciadv_2024.md
+          title: Carbotte et al. (2024)
+		  
+		  
+    # --- Primary Tools ---
     - title: Primary Tools
       children:
         - file: usage/overview.md
@@ -44,6 +63,7 @@ project:
         - file: usage/cvm_writer_3d.md
         - file: usage/cvm_writer_h5.md
         - file: usage/cvm_slicer.md
+	
     - title: Utility Tools
       children:
         - file: usage/convert_to_csv_2d.md
@@ -56,10 +76,9 @@ project:
         - file: usage/netcdf_to_h5.md
         - file: usage/show_file_structure.md
         - file: usage/verify_installation.md
-    - title: Contact Us
+    - title: Submission Instructions
       children:
         - file: contribution_guidelines.md
-        - file: contributions_feedback.md
 
 site:
   template: book-theme
