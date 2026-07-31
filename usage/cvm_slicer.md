@@ -105,7 +105,7 @@ Since our goal is a depth slice, select `depth`.
    After providing the slice parameters, a summary of the slice will be displayed:
 
    <figure>
-      <img src="../_images/cvm_slicer_summary.png" alt="Summary Prompt" width="400"/>
+      <img src="../images/cvm_slicer_summary.png" alt="Summary Prompt" width="400"/>
       <figcaption>A summary of the selected depth slice at a depth of 20 km.</figcaption>
    </figure>
 
@@ -124,7 +124,7 @@ Since our goal is a depth slice, select `depth`.
    Below is the plot generated after selecting the `gmap` option:
 
    <figure>
-   <img src="../_images/cvm_slicer_depth_20_gmap.png" alt="Summary Output" width="400"/>
+   <img src="../images/cvm_slicer_depth_20_gmap.png" alt="Summary Output" width="400"/>
    <figcaption>Depth slice at 20 km depth from gmap option.</figcaption>
    </figure>
 
@@ -155,7 +155,7 @@ NOTES: [INFO] grid_mapping_name is latitude_longitude
 ```
 
 <figure>
-<img src="../_images/cvm_slicer_xsection.png" alt="Summary Output" width="400"/>
+<img src="../images/cvm_slicer_xsection.png" alt="Summary Output" width="400"/>
 <figcaption>A cross-section plot of the model using the xsection option.</figcaption>
 </figure>
 

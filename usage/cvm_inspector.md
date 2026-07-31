@@ -2,7 +2,7 @@
 
 The `cvm_inspector` tool is a utility tool for checking the metadata, dimensions, coordinates, and variables of a netCDF file. The tool provides a comprehensive inspection of the file and ensures compliance with the CF convention.
 
-In this tutorial, we will demonstrate how to run `netcdf_to_cvm` on the CVM netCDF file we created with the <a href="cvm_writer.html">cvm_writer tool</a> tool (`Cascadia-ANT+RF-test.nc`) to validate its metadata.
+In this tutorial, we will demonstrate how to run `netcdf_to_cvm` on the CVM netCDF file we created with the <a href="cvm_writer_3d.md">cvm_writer tool</a> tool (`Cascadia-ANT+RF-test.nc`) to validate its metadata.
 
 ## Overview
 

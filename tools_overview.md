@@ -18,7 +18,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 - Model in GeoCSV
 - Model in netCDF
 
-**Guide**: <a href="usage/cvm_writer.html">cvm_writer</a>
+**Guide**: <a href="usage/cvm_writer_2d.md">cvm_writer_2D</a> / <a href="usage/cvm_writer_3d.md">cvm_writer_3D</a>
 
 ### cvm_writer_h5 (TESTING)
 
@@ -27,7 +27,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: Create a CVM model in HDF5 format based on input parameter files and given CSV data file(s).
 
-**Guide**: <a href="usage/cvm_writer_h5.html">cvm_writer_h5</a>
+**Guide**: <a href="usage/cvm_writer_h5.md">cvm_writer_h5</a>
 
 ### cvm_slicer
 
@@ -36,7 +36,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: Extract data from a CVM netCDF file. Interactively, users can inspect the metadata, slice the data, plot, and save the sliced data.
 
-**Guide**: <a href="usage/cvm_slicer.html">cvm_slicer</a>
+**Guide**: <a href="usage/cvm_slicer.md">cvm_slicer</a>
 
 ## Support Tools
 
@@ -47,7 +47,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: Converts 2D netCDF (.nc) or GeoJSON files into CSV format, extracting coordinate data (`x`, `y`) and associated metadata or attributes. Supports features like handling missing values and flattening multi-point geometries.
 
-**Guide**: <a href="usage/convert_to_csv_2d.html">convert_to_csv_2d</a>
+**Guide**: <a href="usage/convert_to_csv_2d.md">convert_to_csv_2d</a>
 
 ### hdf5_summary_info
 
@@ -56,7 +56,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: This script is for verifying the overall structure and integrity of HDF5 files, ensuring that they conform to expected formats and contain the necessary information for further processing or analysis.
 
-**Guide**: <a href="usage/hdf5_summary_info.html">hdf5_summary_info</a>
+**Guide**: <a href="usage/hdf5_summary_info.md">hdf5_summary_info</a>
 
 ### netcdf_summary_info
 
@@ -65,7 +65,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: This script is for verifying the overall structure and integrity of netCDF files, ensuring that they conform to expected formats and contain the necessary information for further processing or analysis.
 
-**Guide**: <a href="usage/netcdf_summary_info.html">netcdf_summary_info</a>
+**Guide**: <a href="usage/netcdf_summary_info.md">netcdf_summary_info</a>
 
 ### netcdf_to_cvm
 
@@ -74,7 +74,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: Convert a netCDF file to the CVM netCDF standard.
 
-**Guide**: <a href="usage/netcdf_to_cvm.html">netcdf_to_cvm</a>
+**Guide**: <a href="usage/netcdf_to_cvm.md">netcdf_to_cvm</a>
 
 ### netcdf_to_geocsv
 
@@ -83,7 +83,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: Convert a CVM netCDF file to GeoCSV format and/or output its metadata in JSON format.
 
-**Guide**: <a href="usage/netcdf_to_geocsv.html">netcdf_to_geocsv</a>
+**Guide**: <a href="usage/netcdf_to_geocsv.md">netcdf_to_geocsv</a>
 
 ### netcdf-2d_to_geojson
 
@@ -92,7 +92,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: To converts 2D netCDF (.nc) or .grd files into GeoJSON format, supporting rectangular and triangular grid representations. It can handle depth or elevation variables and allows decimation of data to improve performance.
 
-**Guide**: <a href="usage/netcdf-2d_to_geojson.html">netcdf-2d_to_geojson</a>
+**Guide**: <a href="usage/netcdf-2d_to_geojson.md">netcdf-2d_to_geojson</a>
 
 ### netcdf_to_h5
 
@@ -101,7 +101,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: Convert a netCDF file to the HDF5 format.
 
-**Guide**: <a href="usage/netcdf_to_hd.html">netcdf_to_hd\*</a>
+**Guide**: <a href="usage/netcdf_to_h5.md">netcdf_to_h5</a>
 
 ### show_file_structure
 
@@ -110,7 +110,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: reads a file (either HDF5 or netCDF format) and prints its structure, including the file name, size, and type. It is useful for quickly inspecting the contents of the model data files.
 
-**Guide**: <a href="usage/show_file_structure.html">netcdf_to_hd\*</a>
+**Guide**: <a href="usage/show_file_structure.md">show_file_structure</a>
 
 ### verify_installation
 
@@ -120,7 +120,7 @@ This chapter provides an overview of the various tools available in the CVM-Tool
 
 **Usage**: Verify the installation.
 
-**Guide**: <a href="usage/verify_installation.html">verify_installation</a>
+**Guide**: <a href="usage/verify_installation.md">verify_installation</a>
 
 ### netcdf_to_geomodelgrids (under development)
 

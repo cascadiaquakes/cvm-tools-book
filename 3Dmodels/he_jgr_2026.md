@@ -7,7 +7,7 @@ Bin He, Jonathan R. Delph, Shihan Wu, Emilie E. E. Hooft, Alex Grant, Valerie J.
 [![DOI](https://img.shields.io/badge/DOI-10.1029%2F2025JB033216-blue)](https://doi.org/10.1029/2025JB033216)
 
 :::{figure} ../images/he_jgr_2026.jpg
-:label: fig:{vs_fig}
+:label: fig:he-2026-vs
 
 Adaptive Common Conversion Point (ACCP) stacking results from this study (panels a, c, and e) are compared with those from Delph et al. (2018) (panels b, d, and f), corresponding to cross-sections X–X′ along 44.1°
 N (a, b), Y1–Y1′ along −132.2°

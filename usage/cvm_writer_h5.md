@@ -34,7 +34,7 @@ longitude latitude depth vs
 
 <div class="figure-container" style="display: flex; justify-content: space-around; align-items: center;">
     <figure>
-        <img src="../_images/step2_data_file.png" alt="Data File" width="300"/>
+        <img src="../images/step2_data_file.png" alt="Data File" width="300"/>
         <figcaption>Data file with the required header added. The delimiter between column names should be the same as used for the data.</figcaption>
     </figure>
 </div>
@@ -46,7 +46,7 @@ Now, we need model metadata files. The metadata files contain the model metadata
 For this tutorial, you do not need to copy templates. We already have the necessary metadata file for the global attributes as `Cascadia-ANT+RF_global_meta.txt` and for variables as `Cascadia-ANT+RF_meta.txt` placed under this directory.
 
 <figure>
-    <img src="../_images/Cascadia-ANT+RF_global_meta.png" alt="Metadata File" width="500"/>
+    <img src="../images/Cascadia-ANT+RF_global_meta.png" alt="Metadata File" width="500"/>
     <figcaption>A view of the global metadata file.</figcaption>
 </figure>
 
@@ -147,14 +147,14 @@ python ../../src/hdf5_summary_info.py
 ```
 
 <figure>
-    <img src="../_images/hdf5_summary_prompt.png" alt="Summary Prompt" width="400"/>
+    <img src="../images/hdf5_summary_prompt.png" alt="Summary Prompt" width="400"/>
     <figcaption>Prompt for HDF5 file name.</figcaption>
 </figure>
 
 After providing the file name, you will see a summary of the HDF5 file content.
 
 <figure>
-    <img src="../_images/hdf5_summary_output.png" alt="Summary Output" width="400"/>
+    <img src="../images/hdf5_summary_output.png" alt="Summary Output" width="400"/>
     <figcaption>Summary of the HDF5 file content.</figcaption>
 </figure>
 
@@ -266,13 +266,13 @@ python ../../src/hdf5_summary_info.py
 ```
 
 <figure>
-    <img src="../_images/hdf5_summary_prompt2.png" alt="Summary Prompt" width="400"/>
+    <img src="../images/hdf5_summary_prompt2.png" alt="Summary Prompt" width="400"/>
     <figcaption>Prompt for HDF5 file name.</figcaption>
 </figure>
 
 After providing the file name, you will see a summary of the HDF5 file content.
 
 <figure>
-    <img src="../_images/hdf5_summary_output2.png" alt="Summary Output" width="400"/>
+    <img src="../images/hdf5_summary_output2.png" alt="Summary Output" width="400"/>
     <figcaption>Summary of the HDF5 file content.</figcaption>
 </figure>

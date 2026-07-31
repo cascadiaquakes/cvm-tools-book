@@ -7,7 +7,7 @@ Patricia A. McCrory, J. Luke Blair, Felix Waldhauser, and David H. Oppenheimer
 [![DOI](https://img.shields.io/badge/DOI-10.1029%2F2012JB009407-blue)](https://doi.org/10.1029/2012JB009407)
 
 :::{figure} ../images/mccrory_jgr_2012.png
-:label: fig:{slabmod}
+:label: fig:mccrory-2012-slab
 
 Map showing hand-contoured model of the Juan de Fuca slab surface (see text for description) and seismicity (ANSS, 1975–2009; CNSN, 1985–2009) located beneath the modeled surface. Solid lines denote depth contours in 10 km increments, long dashed lines denote supplemental depth contours in 5 km increments; short dashed lines denote interpolated contours where control points are more than 50 km apart. Note that Wadati-Benioff zone seismicity mainly occurs in regions where slab model arches along strike.
 :::

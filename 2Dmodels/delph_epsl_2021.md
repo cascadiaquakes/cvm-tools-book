@@ -7,7 +7,7 @@ Jonathan R. Delph, Amanda M. Thomas, and Alan Levander
 [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.epsl.2020.116724-blue)](https://doi.org/10.1016/j.epsl.2020.116724)
 
 :::{figure} ../images/delph_epsl_2021.jpg
-:label: fig:{slabmod}
+:label: fig:delph-2021-slab
 
 Comparison between slab models. (A) Model of McCrory et al. (2012) colored by depth. LFE locations shown by circles and colored by depth (Plourde et al., 2015). Contours every 20 km. Purple line: refined slab model from this study. (B) Histogram of differences between LFE locations and slab depth at their epicenter (gray, McCrory et al., 2012; purple, refined slab model). The M2012 model is often >5 km deeper than LFE hypocenters, while the modified slab model is in much better agreement with LFEs. (C) Modification to the M2012 model (black dots) using a surface created with a 3rd order polynomial fit constrained by a convex hull around LFE hypocenters (purple dots). This surface was merged smoothly with the M2012 model through visual comparison with the ACCP and Vs models (blue dots). (D) Modified slab model in southern Cascadia. Circles are control points in (C).
 :::

@@ -7,7 +7,7 @@ Shannon E. Graham, John P. Loveless, Brendan J. Meade
 [![DOI](https://img.shields.io/badge/DOI-10.1029%2F2017GC007391-blue)](https://doi.org/10.1029/2017GC007391)
 
 :::{figure} ../images/graham_g3_2018.jpg
-:label: fig:{slabmod}
+:label: fig:graham-2018-slab
 
 Model predicted dip-slip/tensile slip deficit rates (mm/year). Convergence is shown as positive and red. The color shade and width of the line indicate the magnitude of slip-deficit rate.
 :::

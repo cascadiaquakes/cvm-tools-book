@@ -7,7 +7,7 @@ Robert W. Porritt, Richard M. Allen, Devin C. Boyarko, and Michael R. Brudzinski
 [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.epsl.2011.06.026-blue)](https://doi.org/10.1016/j.epsl.2011.06.026)
 
 :::{figure} ../images/porritt_epsl_2011.jpg
-:label: fig:{vs_fig}
+:label: fig:porritt-2011-vs
 
 Tectonic maps of the study region. (a) Highlights crustal structure showing sedimentary regions in red and igneous/metamorphic regions in blue. OP— Olympic Peninsula, CR— Cascades Range, CRB— Columbia River Basalts, OCR— Oregon Coast Range, WV— Willamette Valley, CB— Columbia Basin, K— Klamath Mountains, HLP— High Lava Plains, BR— Basin and Range, CCR— California Coast Range, CV— Central Valley, SN— Sierra Nevada. (e) shows earthquakes since 1990 (gold dots), tremor segmentation bounds (red lines), volcanoes (red triangles), depth to slab contours at 20, 30, and 40 km from Audet et al. (2010) (blue lines), and the locations of profiles in Figs. 7 and 8. (b–d, f–i) Depth slices of PNW10-S at 5, 10, 15, 35, 70, and 100 km. Overlain on the depth slices are the quaternary volcanic centers as unfilled triangles.
 :::
