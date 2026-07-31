@@ -26,7 +26,7 @@ longitude latitude depth vs
 
 <div class="figure-container" style="display: flex; justify-content: space-around; align-items: center;">
     <figure>
-        <img src="../_images/step2_data_file.png" alt="Data File" width="300"/>
+        <img src="../images/step2_data_file.png" alt="Data File" width="300"/>
         <figcaption>Data file with the required header added. The delimiter between column names should be the same as used for the data.</figcaption>
     </figure>
 </div>
@@ -38,7 +38,7 @@ Now, we need model metadata files. The metadata files contain the model metadata
 For this tutorial, you do not need to copy templates. We already have the necessary metadata file for the global attributes as `Cascadia-ANT+RF_global_meta.txt` and for variables as `Cascadia-ANT+RF_meta.txt` placed under this directory.
 
 <figure>
-    <img src="../_images/step3_metadata_file.png" alt="Metadata File" width="500"/>
+    <img src="../images/step3_metadata_file.png" alt="Metadata File" width="500"/>
     <figcaption>A view of the global metadata file.</figcaption>
 </figure>
 
@@ -88,11 +88,11 @@ If you created GeoCSV or JSON metadata files in step 4 above, look at these file
 
 <div class="figure-container" style="display: flex; justify-content: space-around; align-items: center;">
     <figure>
-        <img src="../_images/step6_json_content.png" alt="Data File" width="400"/>
+        <img src="../images/step6_json_content.png" alt="Data File" width="400"/>
         <figcaption>Sample content of the JSON metadata file.</figcaption>
     </figure>
     <figure>
-        <img src="../_images/step6_csv_content.png" alt="delimiter" width="400"/>
+        <img src="../images/step6_csv_content.png" alt="delimiter" width="400"/>
         <figcaption>Sample content of the CSV metadata file.</figcaption>
     </figure>
 </div>
@@ -108,20 +108,20 @@ python ../../src/net_summary_info.py
 ```
 
 <figure>
-    <img src="../_images/step7_summary_prompt.png" alt="Summary Prompt" width="400"/>
+    <img src="../images/step7_summary_prompt.png" alt="Summary Prompt" width="400"/>
     <figcaption>Prompt for netCDF file name.</figcaption>
 </figure>
 
 After providing the file name, you will see a summary of the netCDF file content.
 
 <figure>
-    <img src="../_images/step7_summary_output.png" alt="Summary Output" width="400"/>
+    <img src="../images/step7_summary_output.png" alt="Summary Output" width="400"/>
     <figcaption>Summary of the netCDF file content.</figcaption>
 </figure>
 
 ## Step 8: Validate the netCDF File Metadata
 
-To examine the netCDF file content, use the `cvm_inspector.py` tool to check the metadata, dimensions, coordinates, and variables of a netCDF file. The tool provides a comprehensive inspection of the file and ensures compliance with the CF convention (see <a href="cvm_inspector.html">cvm_inspector tool</a>).
+To examine the netCDF file content, use the `cvm_inspector.py` tool to check the metadata, dimensions, coordinates, and variables of a netCDF file. The tool provides a comprehensive inspection of the file and ensures compliance with the CF convention (see <a href="cvm_inspector.md">cvm_inspector tool</a>).
 
 The tool will prompt you to input the netCDF file path to check:
 
@@ -140,4 +140,4 @@ Enter the file name and the inspector start checking the file's metadata.
 
 ## Step 9: Visualize Your New netCDF to Ensure the Proper File Conversion
 
-By going through this tutorial, we have created a netCDF file (`Cascadia-ANT+RF-test.nc`) from the `Cascadia_ANT+RF_Delph2018` model's raw data. Use the <a href="cvm_slicer.html">cvm_slicer tool</a> to view the content of this file and extract data from it to ensure it is properly converted from your original data files.
+By going through this tutorial, we have created a netCDF file (`Cascadia-ANT+RF-test.nc`) from the `Cascadia_ANT+RF_Delph2018` model's raw data. Use the <a href="cvm_slicer.md">cvm_slicer tool</a> to view the content of this file and extract data from it to ensure it is properly converted from your original data files.

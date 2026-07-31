@@ -7,7 +7,7 @@ Suzanne M. Carbotte, Brian Boston, Shuoshuo Han, Brandon Shuck, Jeffrey Beeson,J
 [![DOI](https://img.shields.io/badge/DOI-10.1126%2Fsciadv.adl3198-blue)](https://doi.org/10.1126/sciadv.adl3198)
 
 :::{figure} ../images/carbotte_sciadv_2024.jpg
-:label: fig:{slabmod}
+:label: fig:carbotte-2024-slab
 
 Geometry of top of igneous crust surface along the Cascadia Subduction Zone. (A) Gridded surface showing top Oceanic Crust (tOC) depth derived fromCASie21 and Ridge2trench Pre- Stack depth Migration (PSdM) seismic sections. Plate depth contours in thin black line with every 5 km in bold. Apex of seamounts identi-fied from seismic images indicated with black stars. three pairs of white circles indicate crossing of interpreted faults in lower plate discussed in text. Propagator shearzones (PSZs; gray shading) and plate boundaries (black dashed line) from Fig. 1 are shown to highlight incoming plate tectonic segmentation. (B) Calculated dip of tOCfrom (A). interpreted western edge of wedge backstops from (17) shown including dynamic backstops (blue); static backstops including Siletz-Crescent-Klamath terranes(red with black outline); Franciscan Complex (yellow with black outline). See Materials and Methods for details on gridding and dip calculations. (C) isodistance profiles ofdip of tOC at 20 km seaward and 50 km landward of the deformation front (dF) (thin and bold black lines, respectively).
 :::

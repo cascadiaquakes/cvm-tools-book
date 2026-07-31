@@ -7,7 +7,7 @@ Gavin P. Hayes, Ginevra L. Moore, Daniel E. Portner, Mike Hearne, Hanna Flamme, 
 [![DOI](https://img.shields.io/badge/DOI-10.1126%2Fscience.aat4723-blue)](https://doi.org/10.1126/science.aat4723)
 
 :::{figure} ../images/hayes_science_2018.jpeg
-:label: fig:{slabmod}
+:label: fig:hayes-2018-slab
 
 The global distribution of models included in Slab2. Models are colored by depth. Slab2 and the code base used to create it are openly available via
 :::

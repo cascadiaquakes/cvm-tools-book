@@ -7,7 +7,7 @@ Asif Ashraf, Emilie E. E. Hooft, Douglas R. Toomey, Anne M. Tréhu, Sarah Nolan,
 [![DOI](https://img.shields.io/badge/DOI-10.1029%2F2024JB029525-blue)](https://doi.org/10.1029/2024JB029525)
 
 :::{figure} ../images/ashraf_jgr_2025.jpg
-:label: fig:{vp_fig}
+:label: fig:ashraf-2025-vp
 
 Cross‐sections through the 3‐D tomographic Vp model along the northern (a), central (b), and southern (c) refraction profiles (see Figure 1 for locations) showing the seismic shot lines (pink) and seismic stations (vertical black bars). The models are masked where coverage is poor using a derivative weight sum >10 constraint. Terrane locations are indicated in cross‐sections where their positions are well‐established. No sharp boundaries between terranes are shown. The 5.5 km/s contour is highlighted with a red dashed line to illustrate the geometry and position of the high Vp terrane backstops along these three profiles.
 :::

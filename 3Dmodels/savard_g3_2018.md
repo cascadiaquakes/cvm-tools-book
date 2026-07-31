@@ -7,7 +7,7 @@ Geneviève Savard, Michael G. Bostock, and Nikolas I. Christensen
 [![DOI](https://img.shields.io/badge/DOI-10.1029%2F2017GC007417-blue)](https://doi.org/10.1029/2017GC007417)
 
 :::{figure} ../images/savard_g3_2018.jpg
-:label: fig:{vp_fig}
+:label: fig:savard-2018-vp
 
 Model V$_p$ along the sections AA', BB', and CC'. These profiles are taken parallel to the linear POLARIS array. Black diamonds are LFE hypocenters, black and pink dots are relocated earth-
 quakes within 10 km of the cross section, with pink dots identifying previously uncataloged earthquakes detected by the cross-station algorithm. The thick gray line is the plate interface model of Audet et al. (2010), and dashed gray line is the plate interface model of McCrory et al. (2012). The horizontal dash-dot line is the nominal Moho depth of 36 km. Inverted

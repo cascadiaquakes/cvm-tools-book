@@ -152,7 +152,7 @@ Global Attributes:
 
 ## Step 8: Validate the netCDF File Metadata
 
-To examine the netCDF file content, use the `cvm_inspector.py` tool to check the metadata, dimensions, coordinates, and variables of a netCDF file. The tool provides a comprehensive inspection of the file and ensures compliance with the CF convention (see <a href="cvm_inspector.html">cvm_inspector tool</a>).
+To examine the netCDF file content, use the `cvm_inspector.py` tool to check the metadata, dimensions, coordinates, and variables of a netCDF file. The tool provides a comprehensive inspection of the file and ensures compliance with the CF convention (see <a href="cvm_inspector.md">cvm_inspector tool</a>).
 
 The tool will prompt you to input the netCDF file path to check:
 
@@ -234,4 +234,4 @@ Model Variables:
 
 ## Step 9: Visualize Your New 2D netCDF to Ensure the Proper File Conversion
 
-By going through this tutorial, we have created a 2D netCDF file (`McCroryetal-2012.nc`). Use the <a href="cvm_slicer.html">cvm_slicer tool</a> to create surface plots from this file and extract data from it to ensure it is properly converted from your original data files.
+By going through this tutorial, we have created a 2D netCDF file (`McCroryetal-2012.nc`). Use the <a href="cvm_slicer.md">cvm_slicer tool</a> to create surface plots from this file and extract data from it to ensure it is properly converted from your original data files.
