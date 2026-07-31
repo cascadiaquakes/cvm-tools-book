@@ -1,35 +1,66 @@
-# Welcome to the CVM-Tools Tutorials
+# CRESCENT Community Velocity Model Repository and Viewer
 
-## Project Overview
+The <a href="https://cascadiaquakes.org">Cascadia Region Earthquake Science Center (CRESCENT)</a>  <a href="https://cascadiaquakes.github.io/cvm-tools-book/">**Community Velocity Model Repository**</a> and <a href="https://cvm.cascadiaquakes.org">**CVM Viewer**</a> is a community resource for the collection, documentation, and dissemination of peer-reviewed 3D and 2D seismic velocity models of the crust and mantle within the Cascadia Subduction Zone and surrounding regions. The repository is designed to support reproducible earthquake science by providing standardized access to curated velocity models derived from a wide range of seismic imaging methods.
 
-The [CVM-Tools repository](https://github.com/cascadiaquakes/CRESCENT-CVM) hosts `Python 3` tools developed to support the Cascadia Community Velocity Model ([CVM](https://cascadiaquakes.org/cvm/)) working group's effort in constructing a three-dimensional representation of subsurface material properties for the Cascadia region. These tools facilitate the storage, extraction, and visualization of the CVM through uniform and self-contained data formats.
+This effort is part of the broader mission of CRESCENT to advance understanding of earthquake science in the Pacific Northwest through open science, community model development, and shared cyberinfrastructure.
 
-## About This Tutorial
+## Motivation
 
-This tutorial features a collection of individual guides on the utilization of CVM-Tools. Where needed, guides include examples and step-by-step instructions to help you use CVM-Tools. The guides are broken into three sections: **Introduction**, **Primary Tools**, and **Utility Tools**.
+Three-dimensional velocity models are foundational datasets for studies of subduction zone processes, earthquake source imaging, ground motion simulation, and seismic hazard. Over the past decade, advances in seismic tomography, including full-waveform inversion, joint ambient noise and receiver function inversion, and increasingly dense seismic instrumentation such as nodal arrays and distributed acoustic sensing, have enabled the development of high-resolution regional velocity models that complement broader continental-scale models.
 
-The **Introduction** section provides an overview of standards and rules that apply to all CVM-Tools and includes:
+However, these models are often:
+- Distributed across individual publications and/or repositories,
+- Produced using heterogeneous formats, conventions, and metadata,
+- Difficult to discover, compare, or reuse.
 
-- **Standards and Conventions:** This section gives insight into the essential standards and conventions that CVM-Tools are based on. It covers the supported file formats, metadata requirements, and coordinate systems, ensuring that all users follow a uniform approach to creating, distributing, and utilizing CVM velocity models.
-- **Code Repository Overview:** Provides an overview of the CVM Git repository.
-- **Setup Guide:** Learn how to install the necessary dependencies and configure your environment for using CVM-Tools.
-- **Tool Overview:** Offers an overview of the various tools available in the CVM-Tools package.
+The CRESCENT Community Velocity Model Repository addresses these challenges by providing:
+- A centralized, openly accessible collection of peer-reviewed velocity models,
+- Consistent documentation describing how each model was generated and which parameters are constrained,
+- A visualization tool that permits model comparison in 2D and 3D, interactive slicing, extraction, and download in standardized formats.
 
-The **Primary Tools** section provides tutorials on the primary CVM tools that are used to create, maintain, extract, and visualize CVM data. This section include:
+## Scope
 
-- **Introduction:** Get introduced to the CVM data files that will be used in this guide.
-- **Parameter Files:** Explore how to structure parameter files for constructing metadata.
-- **cvm_writer:** Learn how to use the `cvm_writer` tool to convert raw CSV model data to CVM model files in netCDF.
-- **cvm_writer_h5:** Learn how to use the `cvm_writer_h5` tool to convert raw CSV model data to CVM model files in HDF5.
-- **cvm_slicer:** Learn how to use `cvm_slicer` to visualize and save netCDF CVM data.
+We welcome 3D and 2D velocity models describing the seismic properties (V<sub>p</sub>, V<sub>s</sub>, density, and derived quantities such as V<sub>p</sub>/V<sub>s</sub>, perturbations, and surface wave phase or group velocities) of the crust and mantle in the Cascadia region. Models generated with a variety of imaging techniques, including ambient noise tomography, teleseismic body waves, surface wave dispersion, receiver functions, joint inversions, and machine-learning based approaches, are all in scope.
 
-The **Utility Tools** section provides tutorials on various CVM utility tools to help with data conversion and inspection of CVM files. These tools include:
+The only requirements are that any velocity model submitted for inclusion into the repository:
+- Is primarily located within the **CRESCENT geographic footprint** (Cascadia), and
+- Has been described in **peer-reviewed publications** with an associated DOI.
 
-- **convert_to_csv_2d:** A utility tool for converting 2D netCDF or GeoJSON files to CSV format, extracting coordinate data (`x`, `y`) and associated metadata or attributes.
-- **netcdf_to_geocsv:** A utility tool for converting a netCDF CVM file to the corresponding CSV, GeoCSV format and optionally output its JSON metadata.
-- **netcdf_to_h5:** A utility tool for converting an existing CVM-compliant netCDF file to HDF5 format.
-- **netcdf_to_cvm:** A utility tool for converting an existing netCDF CVM file to the corresponding CVM-compliant netCDF file. This tool will add any missing CVM attributes based on the provided metadata files.
-- **netcdf_summary_info:** A utility tool designed to read, analyze, and provide a comprehensive summary of a netCDF4 classic file’s contents. This script outputs detailed information about dimensions, variables, attributes, and data ranges within the netCDF file, helping users to verify the overall structure and integrity of the file.
-- **hdf5_summary_info:** A utility designed to read, analyze, and provide a comprehensive summary of an HDF5 file’s contents. This script outputs detailed information about groups, datasets, attributes, and data ranges within the HDF5 file, helping users to verify the overall structure and integrity of the file.
+## Repository Structure
 
-To get started, if you are already familiar with CVM standards and conventions, feel free to jump into the {doc}`setup_guide` section, which will walk you through the installation process and initial configuration. Otherwise, before diving into the tools, it's essential to understand the standards and conventions we follow by learning about the {doc}`standards_and_conventions`.
+Each model included in the repository consists of:
+1. A downloadable model file in the standardized CVM netCDF (or HDF5) format, and
+2. A corresponding **Markdown description page** (rendered into this JupyterBook) covering the publication DOI, methodology, spatial extent, and which parameters are constrained.
+
+Description pages follow a standardized Markdown template to ensure clarity and consistency while allowing contributors to highlight the unique aspects of their work.
+
+## Visualization
+
+Models hosted in this repository are integrated into the <a href="https://cvm.cascadiaquakes.org" style="color:#6fa8dc; font-weight:bold;">**CRESCENT CVM Viewer**</a>, enabling interactive exploration of crustal and mantle structure in map view, depth slices, and cross sections. The viewer supports side-by-side model comparison, extraction, and download in standardized formats. It is intended as a discovery and comparison tool and does not replace citation of the original peer-reviewed publications.
+
+## Metadata
+
+For a description of the model fields and other metadata please review the {ref}`model-metadata` section.
+
+## Project Contacts
+
+The CRESCENT Community Velocity Model Repository is developed and maintained by the CRESCENT cyberinfrastructure team in collaboration with the broader Cascadia earthquake science community. Individual models remain the intellectual property of their original authors.
+
+**Amanda M. Thomas**  
+amthom@ucdavis.edu  
+Department of Earth and Planetary Sciences, University of California, Davis  
+
+**William Marfo**  
+wmarfo@ucdavis.edu  
+Cascadia Region Earthquake Science Center    
+Department of Earth and Planetary Sciences, University of California, Davis
+
+**Loïc Bachelot**  
+lbachelo@uoregon.edu  
+Cascadia Region Earthquake Science Center  
+Department of Earth Sciences, University of Oregon
+
+
+## Acknowledgments
+
+This project is supported by the **National Science Foundation** through the Cascadia Region Earthquake Science Center (CRESCENT).
