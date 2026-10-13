@@ -30,12 +30,8 @@ project:
               title: Janiszewski et al. (2019)
             - file: 3Dmodels/stephenson_ofr_2019.md
               title: Stephenson et al. (2019)
-            - file: 3Dmodels/rodgers_grl_2024.md
-              title: Rodgers et al. (2024)
             - file: 3Dmodels/ashraf_jgr_2025.md
               title: Ashraf et al. (2025)
-            - file: 3Dmodels/he_jgr_2026.md
-              title: He et al. (2026)
         - title: 2D Models
           children:
             - file: 2Dmodels/mccrory_jgr_2012.md
