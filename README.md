@@ -5,7 +5,9 @@
 Documentation for the CRESCENT Community Velocity Model (CVM): the velocity models in the repository, how to submit a model, and the CVM-Tools Python package for building, inspecting and converting CVM files.
 
 **Read the book:** https://cascadiaquakes.github.io/cvm-tools-book/
+
 **Viewer:** https://cvm.cascadiaquakes.org
+
 **Code:** https://github.com/cascadiaquakes/CRESCENT-CVM
 
 ---
